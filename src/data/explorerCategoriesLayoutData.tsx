@@ -1,5 +1,5 @@
 import { ExplorerCategory, MenuCategory } from "./categoryTypes";
-import { categoryMenu } from "./menuStructureData";
+import { categoryMenu } from "./megaMenu/categoryMenu";
 import { iconMappingManager } from "./categories/optimized/iconMappingManager";
 
 // Helper to create ExplorerCategory from MenuCategory, now adding styling

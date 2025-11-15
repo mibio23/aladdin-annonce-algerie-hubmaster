@@ -4,6 +4,7 @@ import { ChevronRight, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSafeI18nWithRouter } from "@/lib/i18n/i18nContextWithRouter";
 import { useCategories } from "@/services/supabaseCategoriesService";
+import { getCategoryMenu } from "@/data/megaMenu/categoryMenu";
 
 interface CategoryItemProps {
   category: any;
@@ -51,7 +52,7 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ category, level }) => {
 
 const CategoryMenu = () => {
   const { t, language } = useSafeI18nWithRouter();
-  const { data: categoryMenu = [], isLoading } = useCategories(language);
+  const { data: fetchedCategories = [], isLoading } = useCategories(language);
 
   if (isLoading) {
     return (
@@ -72,9 +73,24 @@ const CategoryMenu = () => {
         {t('categories.title')}
       </div>
       <div className="divide-y">
-        {categoryMenu.map((category) => (
-          <CategoryItem key={category.id} category={category} level={0} />
-        ))}
+        {(() => {
+          const localMenu = getCategoryMenu(language);
+          const hasBaby = fetchedCategories.some((c: any) => c.slug === "bebe-puericulture");
+          const babyCategory = localMenu.find((c) => c.slug === "bebe-puericulture");
+          const withBaby = hasBaby ? fetchedCategories : (babyCategory ? [...fetchedCategories, babyCategory] : fetchedCategories);
+
+          const localMode = localMenu.find((c) => c.slug === "mode-accessoires");
+          const modeIndex = withBaby.findIndex((c: any) => c.slug === "mode-accessoires");
+          const hasMode = modeIndex >= 0;
+          const displayCategories = localMode
+            ? (hasMode
+                ? withBaby.map((c: any, idx: number) => (idx === modeIndex ? localMode : c))
+                : [...withBaby, localMode])
+            : withBaby;
+          return displayCategories.map((category: any) => (
+            <CategoryItem key={category.id} category={category} level={0} />
+          ));
+        })()}
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import {
 // MegaMenu supprimé: laisser le déclencheur visible mais contenu vide
 import BoutiquesDropdownContent from "./nav/BoutiquesDropdownContent";
 import MetierReparateurDropdownContent from "./nav/MetierReparateurDropdownContent";
+import MegaMenuCategories from "./nav/MegaMenuCategories";
 import { useSafeI18nWithRouter } from "@/lib/i18n/i18nContextWithRouter";
 import { useState } from "react";
 import "@/styles/modern-menu.css";
@@ -41,9 +42,8 @@ const HeaderDesktopNav = () => {
             >
               <span className="flex items-center">{t('categories.title')}</span>
             </NavigationMenuTrigger>
-            {/* Contenu neutralisé: menu vide */}
-            <NavigationMenuContent className="bg-transparent border-none shadow-none p-0">
-              <div className="hidden" />
+            <NavigationMenuContent className="bg-white dark:bg-slate-900 border border-gray-200 dark:border-slate-700 shadow-lg">
+              <MegaMenuCategories />
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>

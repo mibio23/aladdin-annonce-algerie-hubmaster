@@ -1,6 +1,6 @@
 import { Image } from "lucide-react"; // Fallback icon
 import { ExplorerCategory } from "../categoryTypes";
-import { categoryMenu } from "../menuStructureData";
+import { categoryMenu } from "../megaMenu/categoryMenu";
 import { popularCategories } from "./popularCategories";
 import { mediumPopularCategories } from "./mediumPopularCategories";
 import { iconMappingManager } from "../categories/optimized/iconMappingManager";

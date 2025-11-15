@@ -4,7 +4,7 @@ export * from "./types/homePageTypes";
 
 // Re-export data from new structured files
 export { wilayas } from "./wilayaData";
-export { categoryMenu, mainCategories } from "./menuStructureData"; // This now uses the new groups
+export { categoryMenu, mainCategories } from "./megaMenu/categoryMenu";
 export { popularCategories, mediumPopularCategories, otherCategories } from "./explorerCategoriesLayoutData"; // This is now updated
 export { homePageTabCategories } from "./tabs/homePageTabCategories"; 
 export { categorizedAnnouncements } from "./announcements/index"; // This is now updated

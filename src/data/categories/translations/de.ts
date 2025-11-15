@@ -7,7 +7,7 @@ export const deTranslations = {
     'services-support': 'Dienstleistungen & Support',
     'vehicules-equipements': 'Fahrzeuge & Ausrüstung',
     'immobilier-maison': 'Immobilien & Haus',
-    'mode-accessoires': 'Mode & Zubehör',
+    'mode-accessoires': 'Herren‑ & Damenbekleidung & Unterwäsche',
     'emploi-services': 'Arbeit & Dienstleistungen',
     'education-loisirs': 'Bildung & Freizeit',
     'gastronomie-alimentation': 'Gastronomie & Lebensmittel',

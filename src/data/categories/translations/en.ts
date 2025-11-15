@@ -7,7 +7,7 @@ export const enTranslations = {
     'services-support': 'Services & Support',
     'vehicules-equipements': 'Vehicles & Equipment',
     'immobilier-maison': 'Real Estate & Home',
-    'mode-accessoires': 'Fashion & Accessories',
+    'mode-accessoires': 'Men & Women Clothing & Underwear',
     'emploi-services': 'Jobs & Services',
     'education-loisirs': 'Education & Leisure',
     'gastronomie-alimentation': 'Gastronomy & Food',

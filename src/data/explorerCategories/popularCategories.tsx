@@ -1,6 +1,6 @@
 import { Image } from "lucide-react"; // Fallback icon
 import { ExplorerCategory } from "../categoryTypes";
-import { categoryMenu } from "../menuStructureData";
+import { categoryMenu } from "../megaMenu/categoryMenu";
 import { iconMappingManager } from "../categories/optimized/iconMappingManager";
 
 export const popularCategories: ExplorerCategory[] = [

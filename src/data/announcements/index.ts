@@ -1,7 +1,7 @@
 
 import { Announcement } from "../types/homePageTypes";
 import { AnnouncementRegistry } from "../registry/AnnouncementRegistry";
-import { categoryMenu } from "../menuStructureData";
+import { categoryMenu } from "../megaMenu/categoryMenu";
 
 // Initialiser le registry
 AnnouncementRegistry.registerAnnouncements();

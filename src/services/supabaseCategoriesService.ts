@@ -98,12 +98,12 @@ export const fetchCategoriesFromSupabase = async (language: string = 'fr'): Prom
 
     if (categoriesError) {
       console.error('Erreur lors de la récupération des catégories:', categoriesError);
-      throw new Error(`Impossible de charger les catégories: ${categoriesError.message}`);
+      return fetchCategoriesFromLocal(language);
     }
 
     if (!categoriesData || categoriesData.length === 0) {
       console.warn(`Aucune catégorie trouvée`);
-      return [];
+      return fetchCategoriesFromLocal(language);
     }
 
     // Fusionner les catégories avec leurs traductions de manière optimisée

@@ -7,14 +7,12 @@ import BackToTopButton from "@/components/shared/BackToTopButton";
 import LoadingSpinner from "@/components/common/LoadingSpinner";
 
 // Lazy load heavy components to reduce initial bundle size
-// Catégories neutralisées: section désactivée
-// const ShopByCategorySection = React.lazy(() => import("@/components/home/ShopByCategorySection"));
+const ShopByCategorySection = React.lazy(() => import("@/components/home/ShopByCategorySection"));
 const AnnouncementsByLineSection = React.lazy(() => import("@/components/home/AnnouncementsByLineSection"));
 const PremiumAnnouncementsSection = React.lazy(() => import("@/components/home/PremiumAnnouncementsSection"));
 const DiscoverShopsSection = React.lazy(() => import("@/components/home/DiscoverShopsSection"));
 const PopularSearchedAnnouncementsSection = React.lazy(() => import("@/components/home/PopularSearchedAnnouncementsSection"));
-// Barre de recherche avancée neutralisée sur la page d’accueil
-// const AdvancedSearchBar = React.lazy(() => import("@/components/home/AdvancedSearchBar"));
+const AdvancedSearchBar = React.lazy(() => import("@/components/home/AdvancedSearchBar"));
 const DatabaseAdvertisingCarousel = React.lazy(() => import("@/components/home/DatabaseAdvertisingCarousel"));
 
 const LazySection: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -34,17 +32,15 @@ const Index = () => {
       {/* Contenu principal en plein écran */}
       <main className="flex-grow">
         <div className="space-y-6 py-4">
-          {/* Shop by Category - désactivé */}
-          {/* <LazySection>
+          <LazySection>
             <ShopByCategorySection />
-          </LazySection> */}
+          </LazySection>
 
-          {/* Barre de recherche avancée - désactivée */}
-          {/* <div className="px-4">
+          <div className="px-4">
             <LazySection>
               <AdvancedSearchBar />
             </LazySection>
-          </div> */}
+          </div>
 
           {/* Sections d'annonces - lazy loaded */}
           <div className="space-y-6">

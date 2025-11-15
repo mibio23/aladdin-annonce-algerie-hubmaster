@@ -7,7 +7,7 @@ export const arTranslations = {
     'services-support': 'الخدمات والدعم',
     'vehicules-equipements': 'المركبات والمعدات',
     'immobilier-maison': 'العقارات والمنزل',
-    'mode-accessoires': 'الموضة والإكسسوارات',
+    'mode-accessoires': 'ملابس رجالية ونسائية وملابس داخلية',
     'emploi-services': 'الوظائف والخدمات',
     'education-loisirs': 'التعليم والتسلية',
     'gastronomie-alimentation': 'المطبخ والتغذية',

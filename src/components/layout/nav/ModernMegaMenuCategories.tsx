@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { useSafeI18nWithRouter } from "@/lib/i18n/i18nContextWithRouter";
-import { useExtendedCategories } from "@/services/extendedCategories/extendedCategoriesService";
+import { getCategoryMenu } from "@/data/megaMenu/categoryMenu";
 import { MenuCategory, SubCategory, SubSubCategory } from "@/data/categoryTypes";
 import { ChevronDown, ChevronRight, Loader2, Search, Globe, Menu, X, ArrowRight, ChevronLeft } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -196,8 +196,8 @@ const getCategoryIcon = (categoryId: string, className: string = 'w-4 h-4'): Rea
 
 const ModernMegaMenuCategories: React.FC = () => {
   const { t, language, isRTL } = useSafeI18nWithRouter();
-  const { extendedCategories: categories } = useExtendedCategories();
-  const isLoading = false; // useExtendedCategories est synchrone, donc pas de chargement
+  const categories = getCategoryMenu(language) as MenuCategory[];
+  const isLoading = false;
   const [searchQuery, setSearchQuery] = useState('');
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [hoveredSubcategory, setHoveredSubcategory] = useState<string | null>(null);

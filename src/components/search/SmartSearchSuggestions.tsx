@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { Search, Clock, TrendingUp, Tag } from 'lucide-react';
 // Dépendance aux catégories neutralisée
 import { useSafeI18nWithRouter  } from "@/lib/i18n/i18nContextWithRouter";
+import { getCategoryMenu } from "@/data/megaMenu/categoryMenu";
 import { safeStringify } from '@/utils/safeStringify';
 
 interface SmartSearchSuggestionsProps {
@@ -74,8 +75,16 @@ const SmartSearchSuggestions = ({ query, onSuggestionSelect, isVisible }: SmartS
 
   // Extraire les noms de catégories
   const categoryNames = useMemo(() => {
-    // Catégories neutralisées: aucune suggestion basée sur catégories
-    return [] as string[];
+    const names: string[] = [];
+    const visit = (cats: any[]) => {
+      for (const c of cats) {
+        if (c && typeof c.name === 'string') names.push(c.name);
+        if (Array.isArray(c?.subcategories)) visit(c.subcategories);
+      }
+    };
+    const cats = getCategoryMenu(language) as any[];
+    visit(cats);
+    return names;
   }, [language]);
 
   useEffect(() => {
