@@ -1,0 +1,19 @@
+// Mises à jour à apporter au fichier src/config/routesOptimizedV2.tsx
+
+// 1. Importer les nouveaux composants
+import CreateShopPage from '@/pages/CreateShopPage';
+import ShopViewPage from '@/pages/ShopViewPage';
+
+// 2. Ajouter les routes suivantes dans la configuration des routes :
+
+// Route pour créer une boutique
+<Route key="creer-boutique" path="creer-boutique" element={withLayout(CreateShopPage)} />
+
+// Route pour consulter une boutique (remplace la route existante /shop/:id)
+<Route key="boutique" path="boutique/:id" element={withLayout(ShopViewPage)} />
+
+// 3. Mettre à jour le composant LanguageRouteWrapper pour inclure les nouvelles routes :
+
+// Ajouter dans le composant LanguageRouteWrapper :
+<Route path="creer-boutique" element={<CreateShopPage />} />
+<Route path="boutique/:id" element={<ShopViewPage />} />

@@ -1,0 +1,28 @@
+import { spanishAuth } from './auth';
+import { spanishIntelligentAssistant } from './intelligentAssistant';
+import spanishNavigation from './navigation';
+import { spanishPwa } from './pwa';
+import spanishCommon from './common';
+import { spanishReviews } from './reviews';
+import { userMenuTranslations } from './userMenu';
+import { profileTranslations } from './profile';
+import { parametresTranslations } from './parametres';
+import { search, spanishSearch } from './search';
+import { spanishFooter } from './footer';
+
+const spanishTranslations = {
+  ...spanishAuth,
+  ...spanishIntelligentAssistant,
+  ...spanishNavigation,
+  ...spanishPwa,
+  ...spanishCommon,
+  reviews: spanishReviews,
+  ...userMenuTranslations,
+  ...profileTranslations,
+  ...parametresTranslations,
+  ...search,
+  ...spanishSearch,
+  ...spanishFooter,
+};
+
+export default spanishTranslations;

@@ -1,0 +1,63 @@
+export const italianContact = {
+  // Pagina Contatti
+  "contact.title": "Contatti",
+  "contact.subtitle": "Hai domande o hai bisogno di assistenza? Il nostro team è qui per aiutarti. Contattaci per qualsiasi informazione o supporto.",
+  
+  // Informazioni de contact
+  "contact.info.title": "Informazioni di contatto",
+  "contact.info.address.title": "Indirizzo",
+  "contact.info.address.street": "Rue Mohamed Belouizdad",
+  "contact.info.address.city": "Algeri",
+  "contact.info.address.country": "Algeria",
+  "contact.info.phone.title": "Telefono",
+  "contact.info.phone.main": "+213 (0) 23 89 45 67",
+  "contact.info.phone.support": "Supporto: +213 (0) 23 89 45 68",
+  "contact.info.email.title": "Email",
+  "contact.info.email.general": "info@aladdin.dz",
+  "contact.info.email.support": "support@aladdin.dz",
+  "contact.info.email.business": "business@aladdin.dz",
+  "contact.info.hours.title": "Orari di apertura",
+  "contact.info.hours.weekdays": "Lun-Ven: 8:00 - 18:00",
+  "contact.info.hours.weekend": "Sab-Dom: 9:00 - 17:00",
+  
+  // Contact rapide
+  "contact.quickContact.title": "Contatto rapido",
+  "contact.quickContact.chat": "Chat dal vivo (disponibile 24/7)",
+  "contact.quickContact.callback": "Richiamata gratuita",
+  "contact.quickContact.email24h": "Risposta via email entro 24h",
+  
+  // Formulaire de contact
+  "contact.form.title": "Inviaci un messaggio",
+  "contact.form.name": "Nome",
+  "contact.form.namePlaceholder": "Il tuo nome completo",
+  "contact.form.nameRequired": "Il nome è obbligatorio",
+  "contact.form.email": "Email",
+  "contact.form.emailPlaceholder": "tua@email.com",
+  "contact.form.emailRequired": "L'email è obbligatoria",
+  "contact.form.emailInvalid": "Inserisci un'email valida",
+  "contact.form.phone": "Telefono",
+  "contact.form.phonePlaceholder": "+213 XXX XXX XXX",
+  "contact.form.company": "Azienda",
+  "contact.form.companyPlaceholder": "Nome della tua azienda (facoltativo)",
+  "contact.form.subject": "Oggetto",
+  "contact.form.subjectPlaceholder": "Oggetto del tuo messaggio",
+  "contact.form.subjectRequired": "L'oggetto è obbligatorio",
+  "contact.form.message": "Messaggio",
+  "contact.form.messagePlaceholder": "Scrivi il tuo messaggio qui...",
+  "contact.form.messageRequired": "Il messaggio è obbligatorio",
+  "contact.form.send": "Invia messaggio",
+  "contact.form.sending": "Invio in corso...",
+  "contact.form.success": "Grazie! Il tuo messaggio è stato inviato con successo. Ti risponderemo al più presto.",
+  "contact.form.privacy": "I tuoi dati sono protetti e utilizzati solo per rispondere alla tua richiesta.",
+  
+  // FAQ
+  "contact.faq.title": "Domande frequenti",
+  "contact.faq.question1": "Come posso pubblicare un annuncio?",
+  "contact.faq.answer1": "È semplice! Crea un account, clicca su 'Pubblica annuncio' e segui le istruzioni. Il tuo annuncio sarà online in pochi minuti.",
+  "contact.faq.question2": "Le transazioni sono sicure?",
+  "contact.faq.answer2": "Sì, utilizziamo sistemi di pagamento sicuri e verifichiamo tutti gli utenti per garantire transazioni protette.",
+  "contact.faq.question3": "Come contatto un venditore?",
+  "contact.faq.answer3": "Puoi inviare un messaggio diretto al venditore tramite il pulsante 'Contatta' presente in ogni annuncio.",
+  "contact.faq.question4": "Quali sono le commissioni?",
+  "contact.faq.answer4": "La pubblicazione di annunci di base è gratuita. Alcune opzioni premium sono disponibili a pagamento per una maggiore visibilità.",
+};

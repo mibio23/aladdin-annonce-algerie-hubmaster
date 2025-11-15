@@ -1,0 +1,13 @@
+// Mises à jour à apporter au fichier src/lib/i18n/languages/french/index.ts
+
+// 1. Importer le fichier de traductions pour la boutique
+import { shop } from './shop';
+
+// 2. Ajouter les traductions de la boutique à l'objet exporté
+export const french = {
+  common,
+  navigation,
+  footer,
+  settings,
+  shop, // Ajouter cette ligne
+};

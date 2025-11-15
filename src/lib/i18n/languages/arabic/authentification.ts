@@ -1,0 +1,61 @@
+
+export const arabicAuthentification = {
+  'authentification.title': 'المصادقة',
+  'authentification.subtitle': 'اكتشف طرق المصادقة الآمنة لدينا وتدابير حماية البيانات لضمان أمان حساب علاء الدين الخاص بك.',
+  'authentification.lastUpdate': 'آخر تحديث: 15 يناير 2025',
+  'authentification.certification': 'معتمد ISO 27001',
+
+  'authentification.introduction.title': 'مقدمة حول المصادقة',
+  'authentification.introduction.content1': 'المصادقة هي عملية حاسمة تسمح بالتحقق من هوية المستخدمين قبل منحهم الوصول إلى خدماتنا. في علاء الدين، نطبق تدابير أمنية قوية لحماية بياناتك الشخصية.',
+  'authentification.introduction.content2': 'يستخدم نظام المصادقة لدينا أحدث تقنيات التشفير ويحترم المعايير الدولية للأمان. نحن ملتزمون بالحفاظ على سرية وسلامة معلوماتك.',
+  'authentification.introduction.content3': 'تفصل هذه الصفحة طرق المصادقة لدينا وتدابير الأمان والممارسات الجيدة التي نوصي بها لحماية حسابك.',
+
+  'authentification.methods.title': 'طرق المصادقة',
+  'authentification.methods.email.title': 'المصادقة عبر البريد الإلكتروني',
+  'authentification.methods.email.description': 'تسجيل دخول آمن بعنوان بريدك الإلكتروني وكلمة المرور',
+  'authentification.methods.email.feature1': 'تشفير كلمات المرور بتجزئة آمنة',
+  'authentification.methods.email.feature2': 'التحقق من صحة البريد الإلكتروني',
+  'authentification.methods.email.feature3': 'استرداد كلمة المرور الآمن',
+  'authentification.methods.phone.title': 'المصادقة عبر الهاتف',
+  'authentification.methods.phone.description': 'التحقق عبر الرسائل النصية برمز لاستخدام واحد',
+  'authentification.methods.phone.feature1': 'رمز تحقق من 6 أرقام',
+  'authentification.methods.phone.feature2': 'انتهاء صلاحية الرموز تلقائياً',
+  'authentification.methods.phone.feature3': 'حماية ضد المحاولات المتعددة',
+
+  'authentification.security.title': 'أمان الحسابات',
+  'authentification.security.encryption.title': 'تشفير البيانات',
+  'authentification.security.encryption.description': 'جميع بياناتك الحساسة مشفرة بأحدث الخوارزميات (AES-256).',
+  'authentification.security.verification.title': 'التحقق بخطوتين',
+  'authentification.security.verification.description': 'خيار متاح لتعزيز أمان حسابك بمصادقة مزدوجة.',
+  'authentification.security.monitoring.title': 'مراقبة الأنشطة',
+  'authentification.security.monitoring.description': 'كشف تلقائي للأنشطة المشبوهة وتنبيهات في الوقت الفعلي.',
+
+  'authentification.compliance.title': 'الامتثال التنظيمي',
+  'authentification.compliance.content1': 'تحترم أنظمة المصادقة لدينا اللوائح المحلية والدولية لحماية البيانات.',
+  'authentification.compliance.gdpr.title': 'GDPR',
+  'authentification.compliance.gdpr.description': 'متوافق مع اللائحة العامة لحماية البيانات',
+  'authentification.compliance.iso.title': 'ISO 27001',
+  'authentification.compliance.iso.description': 'شهادة إدارة أمن المعلومات',
+  'authentification.compliance.algeria.title': 'القانون الجزائري',
+  'authentification.compliance.algeria.description': 'احترام التشريع الجزائري للبيانات',
+
+  'authentification.sessions.title': 'إدارة الجلسات',
+  'authentification.sessions.content1': 'يتم إدارة جلسات المستخدمين لدينا بشكل آمن مع آليات تحكم متقدمة.',
+  'authentification.sessions.features.title': 'ميزات الأمان',
+  'authentification.sessions.features.feature1': 'انتهاء صلاحية الجلسات غير النشطة تلقائياً',
+  'authentification.sessions.features.feature2': 'إدارة الأجهزة المتصلة',
+  'authentification.sessions.features.feature3': 'إمكانية تسجيل الخروج عن بُعد',
+  'authentification.sessions.features.feature4': 'سجل تسجيلات الدخول',
+
+  'authentification.support.title': 'دعم المستخدمين',
+  'authentification.support.content1': 'فريق الدعم لدينا متاح لمساعدتك في جميع جوانب المصادقة.',
+  'authentification.support.services.title': 'الخدمات المتاحة',
+  'authentification.support.services.recovery.title': 'استرداد الحساب',
+  'authentification.support.services.recovery.description': 'مساعدة لاسترداد الوصول إلى حسابك',
+  'authentification.support.services.assistance.title': 'المساعدة التقنية',
+  'authentification.support.services.assistance.description': 'دعم لمشاكل المصادقة',
+
+  'authentification.contact.title': 'اتصال الأمان',
+  'authentification.contact.content': 'لأي استفسار حول أمان حسابك أو طرق المصادقة لدينا، اتصل بفريق الأمان لدينا.',
+  'authentification.contact.hours': 'الاثنين - الجمعة، 9 صباحاً - 6 مساءً'
+};

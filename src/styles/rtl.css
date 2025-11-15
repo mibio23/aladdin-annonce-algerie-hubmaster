@@ -1,0 +1,410 @@
+
+/* Styles RTL pour l'arabe */
+/* Direction RTL pour l'arabe */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Ajustements pour les marges et paddings en RTL */
+[dir="rtl"] .space-x-2 > * + * {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .space-x-4 > * + * {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+  /* Ajustements pour les flex items */
+[dir="rtl"] .justify-between {
+  flex-direction: row-reverse;
+}
+
+/* Fix margins in RTL */
+[dir="rtl"] .ml-4 {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+[dir="rtl"] .mr-4 {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+/* Fix spacing for RTL */
+[dir="rtl"] .space-x-2 > * + * {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .ml-1 {
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+/* Category announcements row adjustments - Force correct positioning */
+[dir="rtl"] .flex.items-center.justify-between {
+  flex-direction: row-reverse !important;
+}
+
+/* UserMenu dropdown RTL fixes */
+[dir="rtl"] [role="menuitem"] {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .dropdown-menu-content {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+[dir="rtl"] .dropdown-menu-content [role="menuitem"] {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .dropdown-menu-content [role="menuitem"] > * {
+  text-align: right !important;
+}
+
+/* Fix for menu items with icons in RTL */
+[dir="rtl"] .dropdown-menu-item > a {
+  flex-direction: row-reverse !important;
+  justify-content: flex-end !important;
+}
+
+[dir="rtl"] .dropdown-menu-item svg {
+  margin-right: 0 !important;
+  margin-left: 0.75rem !important;
+  order: 2 !important;
+}
+
+[dir="rtl"] .dropdown-menu-item > a > div {
+  order: 1 !important;
+  text-align: right !important;
+  align-items: flex-end !important;
+}
+
+/* Fix for logout button */
+[dir="rtl"] .dropdown-menu-item:last-child {
+  flex-direction: row-reverse !important;
+  justify-content: flex-end !important;
+}
+
+[dir="rtl"] .dropdown-menu-item:last-child svg {
+  order: 2 !important;
+  margin-right: 0 !important;
+  margin-left: 0.75rem !important;
+}
+
+[dir="rtl"] .dropdown-menu-item:last-child span {
+  order: 1 !important;
+}
+
+/* Force text alignment for all text elements in RTL dropdown */
+[dir="rtl"] .dropdown-menu-content span,
+[dir="rtl"] .dropdown-menu-content p {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Specific fix for line-clamp elements to ensure RTL alignment */
+[dir="rtl"] .line-clamp-2 {
+  text-align: right !important;
+  direction: rtl !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+}
+
+/* Force RTL alignment on text-muted-foreground elements */
+[dir="rtl"] .text-muted-foreground {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Specific fixes for text elements */
+[dir="rtl"] .text-sm.font-medium {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .text-xs.text-muted-foreground {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Specific fix for UserMenu labels with text-muted-foreground */
+[dir="rtl"] .text-sm.font-medium.text-muted-foreground {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Force right alignment on all child elements */
+[dir="rtl"] [data-radix-menu-content] * {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+/* Specific fix for user info section */
+[dir="rtl"] .dropdown-menu-content .flex.flex-col.items-end * {
+  text-align: right !important;
+  direction: rtl !important;
+}
+
+[dir="rtl"] .flex.justify-between {
+  flex-direction: row-reverse !important;
+}
+
+/* Force the view more button to appear on the left in RTL */
+[dir="rtl"] .flex.justify-between button {
+  order: -1 !important;
+}
+
+/* Specific fix for absolute positioned links */
+[dir="rtl"] .absolute.right-0 {
+  left: 0 !important;
+  right: auto !important;
+}
+
+/* Fix for specific components with view more links */
+[dir="rtl"] .aladdin-link {
+  left: 0 !important;
+  right: auto !important;
+}
+
+  [dir="rtl"] .flex-row {
+    flex-direction: row-reverse;
+  }
+
+  /* Ajustements pour les positionnements */
+  [dir="rtl"] .text-left {
+    text-align: right;
+  }
+
+  [dir="rtl"] .text-right {
+    text-align: right !important;
+  }
+
+  /* Ajustements pour les dropdowns et menus */
+  [dir="rtl"] .absolute.right-0 {
+    left: 0;
+    right: auto;
+  }
+
+  [dir="rtl"] .absolute.left-0 {
+    right: 0;
+    left: auto;
+  }
+
+  /* Ajustements pour les icônes et boutons */
+  [dir="rtl"] .mr-1 {
+    margin-right: 0;
+    margin-left: 0.25rem;
+  }
+
+  [dir="rtl"] .mr-2 {
+    margin-right: 0;
+    margin-left: 0.5rem;
+  }
+
+  [dir="rtl"] .ml-2 {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  /* Police arabe optimisée avec la police Changa */
+  [dir="rtl"] {
+    font-family: 'Changa', 'Arial', sans-serif;
+    font-size: 1.125rem; /* 18px - augmentation de la taille de base */
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  /* Augmentation spécifique pour différents éléments de texte en arabe */
+  [dir="rtl"] p {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+  }
+
+  [dir="rtl"] .text-sm {
+    font-size: 1rem; /* 16px au lieu de 14px */
+    font-weight: 400;
+  }
+
+  [dir="rtl"] .text-base {
+    font-size: 1.25rem; /* 20px au lieu de 16px */
+    font-weight: 400;
+  }
+
+  [dir="rtl"] .text-lg {
+    font-size: 1.375rem; /* 22px au lieu de 18px */
+    font-weight: 500;
+  }
+
+  [dir="rtl"] .text-xl {
+    font-size: 1.5rem; /* 24px au lieu de 20px */
+    font-weight: 500;
+  }
+
+  [dir="rtl"] .text-2xl {
+    font-size: 1.75rem; /* 28px au lieu de 24px */
+    font-weight: 600;
+  }
+
+  [dir="rtl"] .text-3xl {
+    font-size: 2rem; /* 32px */
+    font-weight: 600;
+  }
+
+  [dir="rtl"] .text-4xl {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+  }
+
+  /* Ajustements pour les titres en arabe */
+  [dir="rtl"] h1 {
+    font-family: 'Changa', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 3rem; /* 48px */
+    text-align: right;
+  }
+
+  [dir="rtl"] h2 {
+    font-family: 'Changa', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem; /* 36px */
+    text-align: right;
+  }
+
+  [dir="rtl"] h3 {
+    font-family: 'Changa', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 1.875rem; /* 30px */
+    text-align: right;
+  }
+
+  [dir="rtl"] h4 {
+    font-family: 'Changa', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem; /* 24px */
+    text-align: right;
+  }
+
+  [dir="rtl"] h5 {
+    font-family: 'Changa', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem; /* 20px */
+    text-align: right;
+  }
+
+  [dir="rtl"] h6 {
+    font-family: 'Changa', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem; /* 18px */
+    text-align: right;
+  }
+
+  /* Ajustements pour les boutons et liens en arabe */
+  [dir="rtl"] button,
+  [dir="rtl"] a {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 500;
+  }
+
+  /* Ajustements pour les cartes et contenus en arabe */
+  [dir="rtl"] .card-content,
+  [dir="rtl"] .announcement-content {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 400;
+  }
+
+  /* Styles spécifiques pour les éléments de navigation en arabe */
+  [dir="rtl"] nav,
+  [dir="rtl"] .nav-item {
+    font-family: 'Changa', 'Arial', sans-serif;
+    font-weight: 500;
+  }
+
+  /* Ajustements spécifiques pour les embla carousels en RTL */
+  [dir="rtl"] .embla {
+    direction: rtl;
+  }
+
+  [dir="rtl"] .embla__container {
+    direction: rtl;
+  }
+
+  [dir="rtl"] .embla__slide {
+    direction: ltr;
+  }
+
+  /* Ajustements pour les carousels et navigation */
+  [dir="rtl"] .carousel-previous {
+    left: auto;
+    right: 1rem;
+  }
+
+  [dir="rtl"] .carousel-next {
+    right: auto;
+    left: 1rem;
+  }
+
+  /* Correction pour les marges négatives des carrousels en RTL */
+  [dir="rtl"] .-ml-4 {
+    margin-left: 0;
+    margin-right: -1rem;
+  }
+
+  [dir="rtl"] .pl-4 {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  /* Amélioration spécifique pour les cards et éléments text-center en RTL */
+  [dir="rtl"] .text-center {
+    text-align: right !important;
+  }
+
+  /* Exception pour le footer - centrage réel en RTL */
+  [dir="rtl"] .footer-copyright .text-center {
+    text-align: center !important;
+  }
+
+  /* Exception pour les boutons de langue et marques dans le footer */
+  [dir="rtl"] .footer-language-selector .text-center,
+  [dir="rtl"] .footer-brands .text-center {
+    text-align: center !important;
+  }
+
+  /* Centrage de la description du footer en RTL */
+  [dir="rtl"] .footer-description {
+    text-align: center !important;
+  }
+
+  /* Exception pour la page de chargement - centrage réel en RTL */
+  [dir="rtl"] .loading-title {
+    text-align: center !important;
+  }
+
+  /* Corrections spécifiques pour les flexbox en RTL */
+  [dir="rtl"] .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* Correction pour les icônes centrées en RTL */
+  [dir="rtl"] .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Alignement des conteneurs flex en RTL */
+  [dir="rtl"] .justify-center {
+    justify-content: center;
+  }
+
+  [dir="rtl"] .ui-open\\:rotate-180 {
+    transform: rotate(180deg);
+  }

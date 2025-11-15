@@ -1,0 +1,61 @@
+
+export const frenchAuthentification = {
+  'authentification.title': 'Authentification',
+  'authentification.subtitle': 'Découvrez nos méthodes d\'authentification sécurisées et nos mesures de protection des données pour garantir la sécurité de votre compte Aladdin.',
+  'authentification.lastUpdate': 'Dernière mise à jour : 15 janvier 2025',
+  'authentification.certification': 'Certifié ISO 27001',
+
+  'authentification.introduction.title': 'Introduction à l\'authentification',
+  'authentification.introduction.content1': 'L\'authentification est un processus crucial qui permet de vérifier l\'identité des utilisateurs avant de leur accorder l\'accès à nos services. Chez Aladdin, nous mettons en place des mesures de sécurité robustes pour protéger vos données personnelles.',
+  'authentification.introduction.content2': 'Notre système d\'authentification utilise les dernières technologies de chiffrement et respecte les normes internationales de sécurité. Nous nous engageons à maintenir la confidentialité et l\'intégrité de vos informations.',
+  'authentification.introduction.content3': 'Cette page détaille nos méthodes d\'authentification, nos mesures de sécurité, et les bonnes pratiques que nous recommandons pour protéger votre compte.',
+
+  'authentification.methods.title': 'Méthodes d\'authentification',
+  'authentification.methods.email.title': 'Authentification par email',
+  'authentification.methods.email.description': 'Connexion sécurisée avec votre adresse email et mot de passe',
+  'authentification.methods.email.feature1': 'Chiffrement des mots de passe avec hash sécurisé',
+  'authentification.methods.email.feature2': 'Vérification de la validité de l\'email',
+  'authentification.methods.email.feature3': 'Récupération de mot de passe sécurisée',
+  'authentification.methods.phone.title': 'Authentification par téléphone',
+  'authentification.methods.phone.description': 'Vérification par SMS avec code à usage unique',
+  'authentification.methods.phone.feature1': 'Code de vérification à 6 chiffres',
+  'authentification.methods.phone.feature2': 'Expiration automatique des codes',
+  'authentification.methods.phone.feature3': 'Protection contre les tentatives multiples',
+
+  'authentification.security.title': 'Sécurité des comptes',
+  'authentification.security.encryption.title': 'Chiffrement des données',
+  'authentification.security.encryption.description': 'Toutes vos données sensibles sont chiffrées avec les algorithmes les plus avancés (AES-256).',
+  'authentification.security.verification.title': 'Vérification en deux étapes',
+  'authentification.security.verification.description': 'Option disponible pour renforcer la sécurité de votre compte avec une double authentification.',
+  'authentification.security.monitoring.title': 'Surveillance des activités',
+  'authentification.security.monitoring.description': 'Détection automatique des activités suspectes et alertes en temps réel.',
+
+  'authentification.compliance.title': 'Conformité réglementaire',
+  'authentification.compliance.content1': 'Nos systèmes d\'authentification respectent les réglementations locales et internationales en matière de protection des données.',
+  'authentification.compliance.gdpr.title': 'RGPD',
+  'authentification.compliance.gdpr.description': 'Conforme au Règlement Général sur la Protection des Données',
+  'authentification.compliance.iso.title': 'ISO 27001',
+  'authentification.compliance.iso.description': 'Certification de gestion de la sécurité de l\'information',
+  'authentification.compliance.algeria.title': 'Loi algérienne',
+  'authentification.compliance.algeria.description': 'Respect de la législation algérienne sur les données',
+
+  'authentification.sessions.title': 'Gestion des sessions',
+  'authentification.sessions.content1': 'Nos sessions utilisateur sont gérées de manière sécurisée avec des mécanismes de contrôle avancés.',
+  'authentification.sessions.features.title': 'Fonctionnalités de sécurité',
+  'authentification.sessions.features.feature1': 'Expiration automatique des sessions inactives',
+  'authentification.sessions.features.feature2': 'Gestion des appareils connectés',
+  'authentification.sessions.features.feature3': 'Déconnexion à distance possible',
+  'authentification.sessions.features.feature4': 'Historique des connexions',
+
+  'authentification.support.title': 'Support utilisateur',
+  'authentification.support.content1': 'Notre équipe support est disponible pour vous aider avec tous les aspects de l\'authentification.',
+  'authentification.support.services.title': 'Services disponibles',
+  'authentification.support.services.recovery.title': 'Récupération de compte',
+  'authentification.support.services.recovery.description': 'Aide pour récupérer l\'accès à votre compte',
+  'authentification.support.services.assistance.title': 'Assistance technique',
+  'authentification.support.services.assistance.description': 'Support pour les problèmes d\'authentification',
+
+  'authentification.contact.title': 'Contact sécurité',
+  'authentification.contact.content': 'Pour toute question concernant la sécurité de votre compte ou nos méthodes d\'authentification, contactez notre équipe sécurité.',
+  'authentification.contact.hours': 'Lundi - Vendredi, 9h - 18h'
+};

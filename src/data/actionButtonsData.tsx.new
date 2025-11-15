@@ -1,0 +1,18 @@
+import { 
+  PlusCircle, 
+  Search, 
+  Store
+} from "lucide-react";
+import { useSafeI18nWithRouter  } from "@/lib/i18n/i18nContextWithRouter";
+import { useAuth } from "@/contexts/AuthContext";
+
+export const useActionButtonsData = () => {
+  const { t } = useSafeI18nWithRouter();
+  const { user } = useAuth();
+  
+  return [
+    { to: "/deposer-annonce", text: t('banner.postAd'), Icon: PlusCircle },
+    { to: user ? "/creer-boutique" : "/connexion", text: t('banner.createShop'), Icon: Store },
+    { to: "/rechercher-reparateur", text: t('banner.postSearch'), Icon: Search }
+  ];
+};

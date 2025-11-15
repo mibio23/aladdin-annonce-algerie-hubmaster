@@ -1,0 +1,25 @@
+
+export const englishTerms = {
+  // Terms of Service page
+  'terms.title': 'Terms of Service',
+  'terms.subtitle': 'Terms and conditions for using the Aladdin platform',
+  'terms.lastUpdate': 'Last updated: January 1, 2025',
+  'terms.acceptance.title': 'Acceptance of Terms',
+  'terms.acceptance.content': 'By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement.',
+  'terms.services.title': 'Use of Services',
+  'terms.services.content': 'You may use our services only as permitted by law and these Terms of Service.',
+  'terms.accounts.title': 'User Accounts',
+  'terms.accounts.content': 'You are responsible for maintaining the confidentiality of your account and password.',
+  'terms.content.title': 'Content',
+  'terms.content.content': 'You are solely responsible for the content you post on our platform.',
+  'terms.prohibited.title': 'Prohibited Uses',
+  'terms.prohibited.content': 'You may not use our service for any illegal or unauthorized purpose.',
+  'terms.termination.title': 'Termination',
+  'terms.termination.content': 'We may terminate or suspend your account at any time for violations of these terms.',
+  'terms.liability.title': 'Limitation of Liability',
+  'terms.liability.content': 'Aladdin shall not be liable for any indirect, incidental, special, consequential or punitive damages.',
+  'terms.changes.title': 'Changes to Terms',
+  'terms.changes.content': 'We reserve the right to modify these terms at any time.',
+  'terms.contact.title': 'Contact Us',
+  'terms.contact.content': 'If you have any questions about these Terms, please contact us at legal@aladdin.dz',
+};

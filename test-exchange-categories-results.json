@@ -1,0 +1,39 @@
+{
+  "timestamp": "2025-10-24T11:20:56.855Z",
+  "categoriesFound": true,
+  "subcategoriesFound": true,
+  "subSubcategoriesFound": false,
+  "translationsValid": false,
+  "foundCategories": [
+    "echanges-partage"
+  ],
+  "foundSubcategories": [
+    "don-troc",
+    "covoiturage-transport",
+    "partage-competences",
+    "temps-libre-activites"
+  ],
+  "foundSubSubcategories": [
+    "objets-don",
+    "objets-troc",
+    "services-echanges",
+    "trajets-covoiturage",
+    "location-particuliers",
+    "transport-marchandises",
+    "cours-formations",
+    "mentorat-accompagnement",
+    "aide-benevole",
+    "sorties-evenements",
+    "sports-loisirs"
+  ],
+  "translationCounts": {
+    "fr": 76,
+    "ar": 76,
+    "en": 76,
+    "de": 76,
+    "es": 76
+  },
+  "categoryTranslations": {
+    "echanges-partage": {}
+  }
+}

@@ -1,0 +1,87 @@
+
+import { Link } from "react-router-dom";
+import { useSafeI18nWithRouter } from "@/lib/i18n/i18nContextWithRouter";
+import CategoryMobileAccordion from "./nav/CategoryMobileAccordion";
+
+interface HeaderMobileNavProps {
+  isMenuOpen: boolean;
+}
+
+const HeaderMobileNav = ({ isMenuOpen }: HeaderMobileNavProps) => {
+  const { t } = useSafeI18nWithRouter();
+
+  if (!isMenuOpen) return null;
+  
+  return (
+    <div className="md:hidden mt-3 py-3 border-t">
+      <div className="flex flex-col space-y-3">
+        <Link to="/annonces" className="text-gray-700 hover:text-accessible-orange py-2 font-['Changa',Arial,sans-serif]">
+          {t('header.announcements')}
+        </Link>
+        
+        <CategoryMobileAccordion />
+        
+        <div className="py-2">
+          <div className="flex items-center text-gray-700 font-medium mb-2 font-['Changa',Arial,sans-serif]">
+            {t('header.shops')}
+          </div>
+          <div className="pl-6 flex flex-col space-y-2">
+            <Link to="/boutiques/magasins" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.shops.stores')}
+            </Link>
+            <Link to="/boutiques/cabinets" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.shops.offices')}
+            </Link>
+            <Link to="/boutiques/entreprises-privees" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.shops.privateCompanies')}
+            </Link>
+            <Link to="/boutiques/entreprises-nationales" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.shops.nationalCompanies')}
+            </Link>
+          </div>
+        </div>
+        
+        <div className="py-2">
+          <div className="flex items-center text-gray-700 font-medium mb-2 font-['Changa',Arial,sans-serif]">
+            {t('menu.mobile.repair')}
+          </div>
+          <div className="pl-6 flex flex-col space-y-2">
+            <Link to="/reparation/electromenager" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.mobile.appliances')}
+            </Link>
+            <Link to="/reparation/informatique" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.mobile.computer')}
+            </Link>
+            <Link to="/reparation/automobile" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.mobile.automotive')}
+            </Link>
+            <Link to="/reparation/plomberie" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.mobile.plumbing')}
+            </Link>
+            <Link to="/reparation/electricite" className="text-gray-600 hover:text-accessible-orange font-['Changa',Arial,sans-serif]">
+              {t('menu.mobile.electricity')}
+            </Link>
+          </div>
+        </div>
+        
+        <Link to="/deposer-annonce" className="text-gray-700 hover:text-accessible-orange py-2 font-['Changa',Arial,sans-serif]">
+          {t('header.postAd')}
+        </Link>
+        
+        <Link to="/connexion" className="text-gray-700 hover:text-accessible-orange py-2 font-['Changa',Arial,sans-serif]">
+          {t('menu.mobile.createShop')}
+        </Link>
+        
+        <Link to="/je-recherche" className="text-gray-700 hover:text-accessible-orange py-2 font-['Changa',Arial,sans-serif]">
+          {t('menu.mobile.search')}
+        </Link>
+        
+        <Link to="/aide" className="text-gray-700 hover:text-accessible-orange py-2 font-['Changa',Arial,sans-serif]">
+          {t('header.help')}
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default HeaderMobileNav;

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Aladdin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 400px;
+      width: 100%;
+    }
+    
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+    
+    h1 {
+      font-size: 28px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+      opacity: 0.9;
+    }
+    
+    .button {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.2s ease;
+    }
+    
+    .button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+    
+    .status {
+      margin-top: 24px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    
+    .status.online {
+      color: #4ade80;
+    }
+    
+    .status.offline {
+      color: #f87171;
+    }
+    
+    @media (max-width: 480px) {
+      .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">🔌</div>
+    <h1>Vous êtes hors ligne</h1>
+    <p>
+      Il semble que vous n'ayez pas de connexion internet. 
+      Vérifiez votre connexion et essayez à nouveau.
+    </p>
+    
+    <a href="/" class="button" id="retryButton">
+      Réessayer
+    </a>
+    
+    <div class="status" id="connectionStatus">
+      🔴 Hors ligne
+    </div>
+  </div>
+
+  <script>
+    // Check connection status
+    function updateConnectionStatus() {
+      const statusElement = document.getElementById('connectionStatus');
+      const retryButton = document.getElementById('retryButton');
+      
+      if (navigator.onLine) {
+        statusElement.textContent = '🟢 En ligne';
+        statusElement.className = 'status online';
+        retryButton.style.display = 'inline-block';
+      } else {
+        statusElement.textContent = '🔴 Hors ligne';
+        statusElement.className = 'status offline';
+      }
+    }
+    
+    // Listen for connection changes
+    window.addEventListener('online', () => {
+      updateConnectionStatus();
+      // Auto-redirect when connection is restored
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 1000);
+    });
+    
+    window.addEventListener('offline', updateConnectionStatus);
+    
+    // Initial status check
+    updateConnectionStatus();
+    
+    // Retry button handler
+    document.getElementById('retryButton').addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // Test connection by trying to fetch a small resource
+      fetch('/', { 
+        method: 'HEAD',
+        mode: 'no-cors',
+        cache: 'no-cache'
+      })
+      .then(() => {
+        window.location.href = '/';
+      })
+      .catch(() => {
+        // Still offline, show message
+        const button = e.target;
+        const originalText = button.textContent;
+        button.textContent = 'Toujours hors ligne...';
+        button.style.background = 'rgba(248, 113, 113, 0.3)';
+        
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.style.background = 'rgba(255, 255, 255, 0.2)';
+        }, 2000);
+      });
+    });
+    
+    // Periodic connection check
+    setInterval(() => {
+      if (navigator.onLine) {
+        fetch('/', { 
+          method: 'HEAD',
+          mode: 'no-cors',
+          cache: 'no-cache'
+        })
+        .then(() => {
+          window.location.href = '/';
+        })
+        .catch(() => {
+          // Connection might be limited
+        });
+      }
+    }, 5000);
+  </script>
+</body>
+</html>

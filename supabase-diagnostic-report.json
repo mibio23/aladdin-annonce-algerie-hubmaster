@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-10-17T11:42:04.350Z",
+  "issues": {
+    "policyIssues": [
+      {
+        "table": "announcements",
+        "issue": "INSERT policy missing WITH CHECK clause",
+        "severity": "high"
+      }
+    ],
+    "missingBuckets": [
+      "announcement-images"
+    ]
+  },
+  "correctionsApplied": 0,
+  "health": {
+    "policies": "CORRIGÉ",
+    "buckets": "CORRIGÉ"
+  }
+}

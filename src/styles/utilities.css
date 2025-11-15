@@ -1,0 +1,30 @@
+
+@tailwind utilities;
+
+/* Brand color utilities with WCAG AA compliant contrast */
+.text-brand-gold { color: hsl(var(--brand-gold)); }
+.hover\:text-brand-gold:hover { color: hsl(var(--brand-gold)); }
+.hover\:border-brand-gold:hover { border-color: hsl(var(--brand-gold)); }
+.group:hover .group-hover\:text-brand-gold { color: hsl(var(--brand-gold)); }
+.text-brand-price { color: hsl(var(--brand-price)); }
+.text-brand-link { color: hsl(var(--brand-link)); }
+.text-brand-link:hover { filter: brightness(0.9); }
+.dark .text-brand-link:hover { filter: brightness(1.1); }
+
+.text-brand-urgent { color: hsl(var(--brand-urgent-text)); }
+.bg-brand-urgent { background-color: hsl(var(--brand-urgent-bg)); }
+.border-brand-urgent-l { border-left-color: hsl(var(--brand-urgent-border)); }
+
+.text-brand-facebook { color: hsl(var(--brand-facebook)); }
+.text-brand-whatsapp { color: hsl(var(--brand-whatsapp)); }
+.text-brand-telegram { color: hsl(var(--brand-telegram)); }
+
+.bg-brand-accent-transparent {
+  background-color: hsl(var(--brand-glow-accent) / 0.2);
+}
+
+/* High contrast utility classes to replace problematic colors */
+.text-accessible-orange { color: hsl(22 95% 41%); } /* replaces text-orange-500/600 */
+.bg-accessible-orange { background-color: hsl(22 95% 41%); }
+.text-accessible-red { color: hsl(0 84% 45%); } /* replaces text-red-500 */
+.text-accessible-gray { color: hsl(215.4 16.3% 36.9%); } /* replaces text-gray-400 */

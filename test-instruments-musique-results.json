@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-10-24T11:40:53.084Z",
+  "success": false,
+  "summary": "Test échoué",
+  "categories": {
+    "main": 1,
+    "subcategories": 8,
+    "subSubcategories": 50,
+    "total": 59
+  }
+}

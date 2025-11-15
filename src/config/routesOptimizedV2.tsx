@@ -1,0 +1,174 @@
+import React, { Suspense } from "react";
+import { Route, Navigate } from "react-router-dom";
+import AppLayout from "@/components/layout/AppLayout";
+import LoadingSpinner from "@/components/common/LoadingSpinner";
+import LanguageRouteWrapper from "@/components/i18n/LanguageRouteWrapper";
+
+// Eager load critical components for better initial performance
+import Index from "@/pages/Index";
+import NotFound from "@/pages/NotFound";
+import Connexion from "@/pages/Connexion";
+import Inscription from "@/pages/Inscription";
+import CategoryPage from "@/pages/CategoryPage";
+
+// Lazy load less critical pages with intelligent grouping
+const NotreHistoire = React.lazy(() => import("@/pages/NotreHistoire"));
+const Carrieres = React.lazy(() => import("@/pages/Carrieres"));
+const CommentCaMarche = React.lazy(() => import("@/pages/CommentCaMarche"));
+const Contact = React.lazy(() => import("@/pages/Contact"));
+
+// Legal pages - can be lazy loaded
+const ConditionsGenerales = React.lazy(() => import("@/pages/ConditionsGenerales"));
+const PolitiqueConfidentialite = React.lazy(() => import("@/pages/PolitiqueConfidentialite"));
+const MentionsLegales = React.lazy(() => import("@/pages/MentionsLegales"));
+const GestionCookies = React.lazy(() => import("@/pages/GestionCookies"));
+
+// User pages - preload when user is authenticated
+const SubcategoryPage = React.lazy(() => import("@/pages/SubcategoryPage"));
+const Authentification = React.lazy(() => import("@/pages/Authentification"));
+const Parametres = React.lazy(() => import("@/pages/Parametres"));
+const MotDePasseOublie = React.lazy(() => import("@/pages/MotDePasseOublie"));
+
+// Secondary pages
+const Actualites = React.lazy(() => import("@/pages/Actualites"));
+const SignalerContenu = React.lazy(() => import("@/pages/SignalerContenu"));
+const ConseilsSecurite = React.lazy(() => import("@/pages/ConseilsSecurite"));
+const EspacePro = React.lazy(() => import("@/pages/EspacePro"));
+const CentreAide = React.lazy(() => import("@/pages/CentreAide"));
+const PlanDuSite = React.lazy(() => import("@/pages/PlanDuSite"));
+const FAQ = React.lazy(() => import("@/pages/FAQ"));
+
+// Heavy pages - lazy load with lower priority
+const AdminDashboard = React.lazy(() => import("@/pages/admin/AdminDashboard"));
+const AnnouncementDetailsPage = React.lazy(() => import("@/pages/AnnouncementDetailsPage"));
+const ShopDetails = React.lazy(() => import("@/pages/ShopDetails"));
+const TelechargerApp = React.lazy(() => import("@/pages/TelechargerApp"));
+const PublicProfile = React.lazy(() => import("@/pages/PublicProfile"));
+const PaymentSuccess = React.lazy(() => import("@/pages/PaymentSuccess"));
+const PaymentCancel = React.lazy(() => import("@/pages/PaymentCancel"));
+const FavoritesList = React.lazy(() => import("@/components/favorites/FavoritesList"));
+const SearchResultsPage = React.lazy(() => import("@/pages/SearchResultsPage"));
+const Chat = React.lazy(() => import("@/pages/Chat"));
+const MyAnnouncements = React.lazy(() => import("@/pages/MyAnnouncements"));
+const BookingCalendar = React.lazy(() => import("@/pages/BookingCalendar"));
+const CreateAnnouncementComplete = React.lazy(() => import("@/pages/CreateAnnouncementComplete"));
+const UserDashboard = React.lazy(() => import("@/components/dashboard/UserDashboard"));
+const MesBoutiques = React.lazy(() => import("@/pages/MesBoutiques"));
+const CreateShopPage = React.lazy(() => import("@/pages/CreateShopPage"));
+const RechercheProduit = React.lazy(() => import("@/pages/RechercheProduit"));
+const DeposerOffreMetier = React.lazy(() => import("@/pages/DeposerOffreMetier"));
+
+// Optimized Suspense wrapper with better UX
+const SuspenseWrapper: React.FC<{ children: React.ReactNode; fallback?: React.ReactNode }> = ({ 
+  children, 
+  fallback = (
+    <div className="flex items-center justify-center min-h-[40vh]">
+      <LoadingSpinner size="md" />
+    </div>
+  )
+}) => (
+  <Suspense fallback={fallback}>
+    {children}
+  </Suspense>
+);
+
+// Fast loading fallback for critical pages
+const FastFallback = (
+  <div className="flex items-center justify-center min-h-[20vh]">
+    <div className="animate-pulse bg-muted rounded h-4 w-32"></div>
+  </div>
+);
+
+// Helper to create a route with layout and optimized suspense
+const withLayout = (Component: React.ComponentType, showHeader: boolean = true, priority: 'high' | 'normal' | 'low' = 'normal') => {
+  const fallback = priority === 'high' ? FastFallback : undefined;
+  
+  return (
+    <AppLayout showHeader={showHeader}>
+      <SuspenseWrapper fallback={fallback}>
+        <Component />
+      </SuspenseWrapper>
+    </AppLayout>
+  );
+};
+
+// Helper for eager-loaded components (no suspense needed)
+const withLayoutEager = (Component: React.ComponentType, showHeader: boolean = true) => (
+  <AppLayout showHeader={showHeader}>
+    <Component />
+  </AppLayout>
+);
+
+// Routes publiques avec header - optimized loading priorities
+export const publicRoutes = [
+  // Wrapper pour gérer les préfixes de langue
+  <Route key="lang-wrapper" path="/:lang?" element={<LanguageRouteWrapper />}>
+    <Route key="home" path="" element={withLayoutEager(Index)} />
+    <Route key="category" path="category/:slug" element={withLayoutEager(CategoryPage)} />
+    <Route key="connexion" path="connexion" element={withLayoutEager(Connexion)} />
+    <Route key="inscription" path="inscription" element={withLayoutEager(Inscription)} />
+    <Route key="subcategory" path="category/:slug/:subslug" element={withLayout(SubcategoryPage, true, 'high')} />
+    <Route key="annonce" path="annonce/:id" element={withLayout(AnnouncementDetailsPage, true, 'high')} />
+    <Route key="search" path="search" element={withLayout(SearchResultsPage, true, 'high')} />
+    <Route key="notre-histoire" path="notre-histoire" element={withLayout(NotreHistoire)} />
+    <Route key="comment-ca-marche" path="comment-ca-marche" element={withLayout(CommentCaMarche)} />
+    <Route key="contact" path="contact" element={withLayout(Contact)} />
+    <Route key="authentification" path="authentification" element={withLayout(Authentification)} />
+    <Route key="shop" path="shop/:id" element={withLayout(ShopDetails)} />
+    <Route key="public-profile" path="user/:userId" element={withLayout(PublicProfile)} />
+    <Route key="actualites" path="actualites" element={withLayout(Actualites)} />
+    <Route key="faq" path="faq" element={withLayout(FAQ)} />
+    <Route key="aide" path="aide" element={withLayout(CentreAide)} />
+    <Route key="carrieres" path="carrieres" element={withLayout(Carrieres, true, 'low')} />
+    <Route key="conditions-generales" path="conditions-generales" element={withLayout(ConditionsGenerales, true, 'low')} />
+    <Route key="politique-confidentialite" path="politique-confidentialite" element={withLayout(PolitiqueConfidentialite, true, 'low')} />
+    <Route key="mentions-legales" path="mentions-legales" element={withLayout(MentionsLegales, true, 'low')} />
+    <Route key="gestion-cookies" path="gestion-cookies" element={withLayout(GestionCookies, true, 'low')} />
+    <Route key="signaler" path="signaler" element={withLayout(SignalerContenu, true, 'low')} />
+    <Route key="plan-du-site" path="plan-du-site" element={withLayout(PlanDuSite, true, 'low')} />
+    <Route key="conseils-securite" path="conseils-securite" element={withLayout(ConseilsSecurite, true, 'low')} />
+    <Route key="pro" path="pro" element={withLayout(EspacePro, true, 'low')} />
+    <Route key="telecharger-app" path="telecharger-app" element={withLayout(TelechargerApp, true, 'low')} />
+    <Route key="payment-success" path="payment-success" element={withLayout(PaymentSuccess, true, 'low')} />
+    <Route key="payment-cancel" path="payment-cancel" element={withLayout(PaymentCancel, true, 'low')} />
+  </Route>
+];
+
+// Routes d'authentification et gestion de compte - high priority for authenticated users
+export const authRoutes = [
+  <Route key="lang-wrapper-auth" path="/:lang?" element={<LanguageRouteWrapper />}>
+    <Route key="auth" path="auth" element={<Navigate to="connexion" replace />} />
+    <Route key="dashboard" path="dashboard" element={withLayout(UserDashboard, true, 'high')} />
+    <Route key="mes-annonces" path="mes-annonces" element={withLayout(MyAnnouncements, true, 'high')} />
+    <Route key="mes-favoris" path="mes-favoris" element={withLayout(FavoritesList, true, 'high')} />
+    <Route key="deposer-annonce" path="deposer-annonce" element={withLayout(CreateAnnouncementComplete, true, 'high')} />
+    <Route key="messages" path="messages" element={withLayout(Chat, true, 'high')} />
+    <Route key="reservations" path="reservations" element={withLayout(BookingCalendar)} />
+    <Route key="mes-boutiques" path="mes-boutiques" element={withLayout(MesBoutiques)} />
+    <Route key="creer-boutique" path="creer-boutique" element={withLayout(CreateShopPage, true, 'high')} />
+    <Route key="je-recherche" path="je-recherche" element={withLayout(RechercheProduit)} />
+    <Route key="deposer-offre-metier" path="deposer-offre-metier" element={withLayout(DeposerOffreMetier, true, 'high')} />
+  </Route>
+];
+
+// Routes utilisateur avec auth
+export const userRoutes = [
+  <Route key="lang-wrapper-user" path="/:lang?" element={<LanguageRouteWrapper />}>
+    <Route key="parametres" path="parametres" element={withLayout(Parametres, true, 'high')} />
+    <Route key="mot-de-passe-oublie" path="mot-de-passe-oublie" element={withLayout(MotDePasseOublie)} />
+  </Route>
+];
+
+// Routes d'administration - lazy loaded with low priority
+export const adminRoutes = [
+  <Route key="lang-wrapper-admin" path="/:lang?" element={<LanguageRouteWrapper />}>
+    <Route key="admin" path="admin/*" element={
+      <SuspenseWrapper>
+        <AdminDashboard />
+      </SuspenseWrapper>
+    } />
+  </Route>
+];
+
+// Route 404 - keep eager loaded
+export const notFoundRoute = <Route key="not-found" path="*" element={<NotFound />} />;

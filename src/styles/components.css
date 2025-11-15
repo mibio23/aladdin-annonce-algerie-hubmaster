@@ -1,0 +1,353 @@
+
+@tailwind components;
+
+@layer components {
+  .btn-publicite {
+    @apply bg-black rounded-full font-semibold text-base px-8 py-2 transition-all duration-200 shadow focus:outline-none focus:ring-2 active:scale-95;
+    color: hsl(var(--brand-gold));
+    border: 2px solid hsl(var(--brand-gold));
+    box-shadow: 0 2px 8px 0 hsl(var(--brand-gold) / 0.2);
+    @apply hover:bg-zinc-900;
+  }
+  .btn-publicite:hover {
+     border-color: hsl(var(--brand-gold) / 0.8);
+     color: hsl(var(--brand-gold) / 0.8);
+  }
+  .btn-publicite:focus {
+    --tw-ring-color: hsl(var(--brand-gold));
+  }
+
+  /* Effet lumineux doré Al@DDIN */
+  .aladdin-glow {
+    color: hsl(var(--brand-gold));
+    @apply transition-all duration-200;
+    text-shadow:
+      0 0 3px hsl(var(--brand-glow-accent)),
+      0 0 7px hsl(var(--brand-glow-main)),
+      0 0 14px hsl(var(--brand-glow-main));
+    filter: brightness(1.15);
+  }
+  .aladdin-glow:hover,
+  .aladdin-glow-hover:hover {
+    color: hsl(var(--brand-gold));
+    text-shadow:
+      0 0 5px hsl(var(--brand-glow-accent)),
+      0 0 13px hsl(var(--brand-glow-main)),
+      0 0 30px hsl(var(--brand-glow-main));
+    filter: brightness(1.2);
+  }
+
+  .aladdin-link {
+    color: hsl(var(--brand-gold));
+    text-shadow: 0 0 0.5px hsl(var(--brand-glow-accent)), 0 0 1.5px hsl(var(--brand-glow-main));
+    filter: none;
+    @apply font-bold transition-all duration-200;
+  }
+  .aladdin-link:hover {
+    filter: brightness(1.1);
+  }
+
+  /* ==== Blackletter Logo styles (newspaper-style wordmark) ==== */
+  .blackletter-logo {
+    font-family: 'UnifrakturMaguntia', 'Germania One', 'Playfair Display', serif;
+    letter-spacing: 0.015em;
+    line-height: 1;
+    /* Subtle stroke + shadow to emulate engraved wordmarks */
+    -webkit-text-stroke: 0.6px rgba(0,0,0,0.75);
+    text-shadow:
+      0 1px 0 rgba(255,255,255,0.25),
+      0 2px 2px rgba(0,0,0,0.35),
+      0 6px 12px rgba(0,0,0,0.15);
+  }
+  .dark .blackletter-logo {
+    -webkit-text-stroke: 0.6px rgba(255,255,255,0.75);
+    text-shadow:
+      0 1px 0 rgba(0,0,0,0.3),
+      0 2px 2px rgba(0,0,0,0.45),
+      0 6px 12px rgba(0,0,0,0.25);
+  }
+  .blackletter-logo .logo-at {
+    font-family: 'Germania One', 'UnifrakturMaguntia', 'Playfair Display', serif;
+    display: inline-block;
+    transform: translateY(1px) scale(1.02);
+    margin: 0 1px;
+  }
+  .blackletter-logo .logo-part {
+    display: inline-block;
+  }
+
+  /* Effet d'ombre de texte rouge pour les titres du mega menu */
+  .text-shadow-red {
+    text-shadow: 
+      0 0 8px #dc2626,
+      0 0 16px #dc2626,
+      0 0 24px #dc2626;
+    filter: brightness(1.1) saturate(1.2);
+  }
+
+  /* Glow doré+rouge ULTRA puissant (uniforme menu navigation bar, hover/focus) */
+  .aladdin-gold-glow-hover:hover,
+  .aladdin-gold-glow-hover:focus-visible {
+    /* Mode clair - sans ombre */
+    filter: brightness(1.25) contrast(1.12) saturate(1.1);
+    background: none;
+    color: inherit;
+    transition: filter 0.22s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  /* Glow doré spécial menu navigation bar */
+  .gold-menu-glow {
+    /* Mode clair - glow version adaptée */
+    text-shadow:
+      0 0 12px #ffd700,
+      0 0 24px #ffe066,
+      0 0 45px #ffd700,
+      0 0 80px #ffda3a,
+      0 0 6px #fffbe6,
+      0 0 12px #fcc419;
+    color: #b8860b !important; /* couleur dorée plus foncée pour le mode clair */
+    filter: brightness(1.3) contrast(1.15) saturate(1.2);
+    transition: text-shadow 0.25s cubic-bezier(0.4,0,0.2,1), color 0.22s;
+  }
+  
+  /* Mode sombre - sans ombre */
+  .dark .aladdin-gold-glow-hover:hover,
+  .dark .aladdin-gold-glow-hover:focus-visible {
+    filter: brightness(1.38) contrast(1.16) saturate(1.15);
+  }
+  
+  .dark .gold-menu-glow {
+    color: #fffbe6 !important;
+    text-shadow:
+      0 0 32px #ffd700,
+      0 0 54px #ffe066,
+      0 0 120px #ffd700,
+      0 0 170px #ffda3a,
+      0 0 24px #fffbe6,
+      0 0 41px #fcc419;
+  }
+
+  /* == 3D Navigation Buttons == */
+  .nav-btn-3d {
+    @apply relative inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 cursor-pointer;
+    
+    /* 3D Effect Base */
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.95), hsl(var(--brand-gold) / 0.8));
+    box-shadow: 
+      0 4px 14px 0 hsl(var(--brand-gold) / 0.35),
+      0 2px 8px 0 hsl(var(--brand-glow-accent) / 0.2),
+      inset 0 1px 0 hsl(0 0% 100% / 0.2),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.1);
+    
+    border: 1px solid hsl(var(--brand-gold) / 0.6);
+    text-shadow: 0 1px 2px hsl(0 0% 0% / 0.3);
+    color: hsl(222.2 47.4% 11.2%);
+  }
+
+  .nav-btn-3d:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, hsl(var(--brand-gold)), hsl(var(--brand-gold) / 0.9));
+    box-shadow: 
+      0 6px 20px 0 hsl(var(--brand-gold) / 0.5),
+      0 4px 12px 0 hsl(var(--brand-glow-accent) / 0.3),
+      inset 0 1px 0 hsl(0 0% 100% / 0.3),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.15);
+  }
+
+  .nav-btn-3d:active {
+    transform: translateY(0px);
+    box-shadow: 
+      0 2px 8px 0 hsl(var(--brand-gold) / 0.4),
+      0 1px 4px 0 hsl(var(--brand-glow-accent) / 0.2),
+      inset 0 1px 0 hsl(0 0% 100% / 0.1),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.2);
+  }
+
+  .nav-btn-3d-secondary {
+    @apply relative inline-flex items-center justify-center px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer;
+    
+    /* Secondary 3D Style - Same golden theme as primary */
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.8), hsl(var(--brand-gold) / 0.65));
+    box-shadow: 
+      0 3px 10px 0 hsl(var(--brand-gold) / 0.25),
+      0 1px 4px 0 hsl(var(--brand-glow-accent) / 0.15),
+      inset 0 1px 0 hsl(0 0% 100% / 0.15),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.08);
+    
+    border: 1px solid hsl(var(--brand-gold) / 0.5);
+    text-shadow: 0 1px 2px hsl(0 0% 0% / 0.25);
+    color: hsl(222.2 47.4% 11.2%);
+  }
+
+  .nav-btn-3d-secondary:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, hsl(var(--brand-gold)), hsl(var(--brand-gold) / 0.85));
+    box-shadow: 
+      0 5px 18px 0 hsl(var(--brand-gold) / 0.4),
+      0 3px 10px 0 hsl(var(--brand-glow-accent) / 0.25),
+      inset 0 1px 0 hsl(0 0% 100% / 0.2),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.12);
+    
+    border-color: hsl(var(--brand-gold) / 0.7);
+    color: hsl(222.2 47.4% 11.2%);
+  }
+
+  .nav-btn-3d-secondary:active {
+    transform: translateY(0px);
+    box-shadow: 
+      0 2px 6px 0 hsl(var(--brand-gold) / 0.3),
+      0 1px 3px 0 hsl(var(--brand-glow-accent) / 0.15),
+      inset 0 1px 0 hsl(0 0% 100% / 0.1),
+      inset 0 -1px 0 hsl(0 0% 0% / 0.15);
+  }
+
+  .nav-link-3d {
+    @apply relative inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 cursor-pointer;
+    
+    color: hsl(var(--foreground));
+    background: transparent;
+  }
+
+  .nav-link-3d:hover {
+    color: hsl(var(--brand-gold));
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.1), hsl(var(--brand-gold) / 0.05));
+    box-shadow: 
+      0 2px 8px 0 hsl(var(--brand-gold) / 0.15),
+      inset 0 1px 0 hsl(0 0% 100% / 0.2);
+    
+    transform: translateY(-1px);
+  }
+
+  .nav-link-3d::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--brand-gold)), hsl(var(--brand-glow-accent)));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link-3d:hover::after {
+    width: 80%;
+  }
+
+  /* Dark mode adjustments */
+  .dark .nav-btn-3d {
+    text-shadow: 0 1px 2px hsl(0 0% 0% / 0.5);
+    color: hsl(222.2 47.4% 11.2%);
+  }
+
+  .dark .nav-btn-3d-secondary {
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.8), hsl(var(--brand-gold) / 0.65));
+    color: hsl(222.2 47.4% 11.2%);
+    text-shadow: 0 1px 2px hsl(0 0% 0% / 0.4);
+  }
+
+  .dark .nav-link-3d {
+    color: hsl(var(--foreground));
+  }
+
+  /* Special red frame icons with yellow color - Same size for all */
+  .red-frame-icon {
+    @apply relative inline-flex items-center justify-center rounded border-2;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    border-color: hsl(var(--brand-gold)) !important;
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.1), hsl(var(--brand-gold) / 0.05));
+    color: hsl(var(--brand-gold)) !important;
+  }
+
+  .red-frame-icon:hover {
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.2), hsl(var(--brand-gold) / 0.1));
+    border-color: hsl(var(--brand-gold)) !important;
+    color: hsl(var(--brand-gold)) !important;
+  }
+
+  /* Special golden frame buttons for text elements */
+  .golden-frame-btn {
+    @apply relative inline-flex items-center justify-center rounded border-2 px-3 py-1;
+    border-color: hsl(var(--brand-gold)) !important;
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.1), hsl(var(--brand-gold) / 0.05));
+    color: hsl(0 0% 0%) !important;
+  }
+
+  .golden-frame-btn:hover {
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.2), hsl(var(--brand-gold) / 0.1));
+    border-color: hsl(var(--brand-gold)) !important;
+    color: hsl(0 0% 0%) !important;
+  }
+
+  .dark .red-frame-icon {
+    border-color: hsl(var(--brand-gold)) !important;
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.15), hsl(var(--brand-gold) / 0.08));
+    color: hsl(var(--brand-gold)) !important;
+  }
+
+  .dark .red-frame-icon:hover {
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.25), hsl(var(--brand-gold) / 0.15));
+    border-color: hsl(var(--brand-gold)) !important;
+    color: hsl(var(--brand-gold)) !important;
+  }
+
+  .dark .golden-frame-btn {
+    border-color: hsl(var(--brand-gold)) !important;
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.15), hsl(var(--brand-gold) / 0.08));
+    color: hsl(var(--brand-gold)) !important;
+  }
+
+  .dark .golden-frame-btn:hover {
+    background: linear-gradient(135deg, hsl(var(--brand-gold) / 0.25), hsl(var(--brand-gold) / 0.15));
+    border-color: hsl(var(--brand-gold)) !important;
+    color: hsl(var(--brand-gold)) !important;
+  }
+
+  /* === TYPOGRAPHIE PROFESSIONNELLE === */
+  /* Titres principaux - Très épais et professionnels */
+  .title-hero {
+    @apply font-heading font-black text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight;
+  }
+  
+  .title-primary {
+    @apply font-heading font-black text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight;
+  }
+  
+  .title-secondary {
+    @apply font-heading font-bold text-2xl md:text-3xl lg:text-4xl leading-tight;
+  }
+  
+  .title-section {
+    @apply font-heading font-bold text-xl md:text-2xl lg:text-3xl leading-tight;
+  }
+  
+  /* Sous-titres - Épais mais moins que les titres */
+  .subtitle-primary {
+    @apply font-heading font-semibold text-lg md:text-xl lg:text-2xl leading-relaxed;
+  }
+  
+  .subtitle-secondary {
+    @apply font-heading font-semibold text-base md:text-lg lg:text-xl leading-relaxed;
+  }
+  
+  /* Rubriques et labels - Professionnels et bien définis */
+  .label-category {
+    @apply font-heading font-bold text-sm md:text-base uppercase tracking-wider;
+  }
+  
+  .label-section {
+    @apply font-heading font-semibold text-sm md:text-base tracking-wide;
+  }
+  
+  /* Texte de contenu professionnel */
+  .text-professional {
+    @apply font-sans font-medium text-base leading-relaxed;
+  }
+  
+  .text-emphasis {
+    @apply font-sans font-semibold text-base leading-relaxed;
+  }
+}

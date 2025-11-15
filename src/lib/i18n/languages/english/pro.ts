@@ -1,0 +1,27 @@
+
+export const englishPro = {
+  // Professional/Pro space translations
+  "pro.title": "Professional Space",
+  "pro.subtitle": "Tools for professionals and businesses",
+  "pro.dashboard": "Professional Dashboard",
+  "pro.analytics": "Analytics",
+  "pro.statistics": "Statistics",
+  "pro.performance": "Performance",
+  "pro.insights": "Insights",
+  "pro.reports": "Reports",
+  "pro.export": "Export Data",
+  "pro.upgrade": "Upgrade Plan",
+  "pro.features": "Features",
+  "pro.billing": "Billing",
+  "pro.subscription": "Subscription",
+  "pro.support": "Professional Support",
+  "pro.training": "Training",
+  "pro.resources": "Resources",
+  "pro.api": "API Access",
+  "pro.integration": "Integrations",
+  "pro.customization": "Customization",
+  "pro.bulkOperations": "Bulk Operations",
+  "pro.advancedSearch": "Advanced Search",
+  "pro.prioritySupport": "Priority Support",
+  "pro.dedicatedManager": "Dedicated Account Manager",
+};

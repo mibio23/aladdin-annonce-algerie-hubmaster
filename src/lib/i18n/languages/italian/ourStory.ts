@@ -1,0 +1,52 @@
+export const italianOurStory = {
+  // Pagina La nostra storia
+  "notreHistoire.title": "La nostra storia",
+  "notreHistoire.visionTitle": "Una visione innovativa per l'Algeria",
+  "notreHistoire.visionContent": "Fondata nel 2025, Aladdin è nata da una visione semplice ma ambiziosa: creare la piattaforma di annunci classificati più completa e affidabile dell'Algeria. Il nostro nome, ispirato al famoso personaggio, simboleggia la nostra promessa di esaudire i desideri dei nostri utenti, sia che siano acquirenti che venditori.",
+  
+  "notreHistoire.missionTitle": "La nostra missione",
+  "notreHistoire.missionContent": "La nostra missione è facilitare gli scambi commerciali in Algeria offrendo una piattaforma moderna, sicura e accessibile a tutti. Ci impegniamo a:",
+  "notreHistoire.missionPoint1": "Collegare acquirenti e venditori in modo efficiente",
+  "notreHistoire.missionPoint2": "Promuovere il commercio locale e l'imprenditoria",
+  "notreHistoire.missionPoint3": "Offrire un'esperienza utente eccezionale",
+  "notreHistoire.missionPoint4": "Garantire la sicurezza delle transazioni",
+  
+  "notreHistoire.valuesTitle": "I nostri valori",
+  "notreHistoire.innovationTitle": "Innovazione",
+  "notreHistoire.innovationContent": "Investiamo costantemente nelle ultime tecnologie per offrire un'esperienza utente ottimale.",
+  "notreHistoire.trustTitle": "Fiducia",
+  "notreHistoire.trustContent": "La sicurezza e la trasparenza sono al centro della nostra piattaforma, con sistemi di verifica rigorosi.",
+  "notreHistoire.proximityTitle": "Prossimità",
+  "notreHistoire.proximityContent": "Il nostro servizio clienti locale comprende le esigenze specifiche del mercato algerino.",
+  "notreHistoire.excellenceTitle": "Eccellenza",
+  "notreHistoire.excellenceContent": "Aspiriamo all'eccellenza in ogni aspetto del nostro servizio.",
+  
+  "notreHistoire.impactTitle": "Il nostro impatto",
+  "notreHistoire.sellersTitle": "Per i venditori",
+  "notreHistoire.sellersPoint1": "Visibilità massima per i vostri prodotti",
+  "notreHistoire.sellersPoint2": "Strumenti di marketing potenti",
+  "notreHistoire.sellersPoint3": "Gestione semplificata degli annunci",
+  "notreHistoire.sellersPoint4": "Supporto dedicato",
+  "notreHistoire.buyersTitle": "Per gli acquirenti",
+  "notreHistoire.buyersPoint1": "Ampia selezione di prodotti e servizi",
+  "notreHistoire.buyersPoint2": "Ricerca facilitata",
+  "notreHistoire.buyersPoint3": "Transazioni sicure",
+  "notreHistoire.buyersPoint4": "Prezzi competitivi",
+  
+  "notreHistoire.innovationContinueTitle": "Innovazione continua",
+  "notreHistoire.innovationContinueContent": "Innoviamo costantemente per migliorare la nostra piattaforma:",
+  "notreHistoire.innovationPoint1": "Interfaccia bilingue (francese/arabo)",
+  "notreHistoire.innovationPoint2": "Applicazione mobile ad alte prestazioni",
+  "notreHistoire.innovationPoint3": "Sistema di pagamento sicuro",
+  "notreHistoire.innovationPoint4": "Intelligenza artificiale per le raccomandazioni",
+  
+  "notreHistoire.engagementTitle": "Impegno nella comunità",
+  "notreHistoire.engagementContent": "Sosteniamo attivamente:",
+  "notreHistoire.engagementPoint1": "L'imprenditoria locale",
+  "notreHistoire.engagementPoint2": "L'economia digitale algerina",
+  "notreHistoire.engagementPoint3": "L'inclusione digitale",
+  "notreHistoire.engagementPoint4": "Il commercio equo",
+  
+  "notreHistoire.joinTitle": "Unisciti all'avventura",
+  "notreHistoire.joinContent": "Sia che tu sia un venditore o un acquirente, Aladdin ti offre un'esperienza unica, adattata al mercato algerino. Unisciti alla nostra comunità in crescita e partecipa alla trasformazione digitale del commercio in Algeria.",
+};

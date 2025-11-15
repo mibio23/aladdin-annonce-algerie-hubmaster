@@ -1,0 +1,27 @@
+
+export const englishPrivacy = {
+  // Privacy Policy page
+  'privacy.title': 'Privacy Policy',
+  'privacy.subtitle': 'How we collect, use, and protect your personal information',
+  'privacy.lastUpdate': 'Last updated: January 1, 2025',
+  'privacy.intro.title': 'Introduction',
+  'privacy.intro.content': 'This Privacy Policy describes how Aladdin collects, uses, and shares your personal information when you use our services.',
+  'privacy.collection.title': 'Information We Collect',
+  'privacy.collection.content': 'We collect information you provide directly to us, information we collect automatically, and information from third parties.',
+  'privacy.use.title': 'How We Use Your Information',
+  'privacy.use.content': 'We use the information we collect to provide, maintain, and improve our services.',
+  'privacy.sharing.title': 'Information Sharing',
+  'privacy.sharing.content': 'We do not sell, trade, or otherwise transfer your personal information to outside parties without your consent.',
+  'privacy.security.title': 'Data Security',
+  'privacy.security.content': 'We implement appropriate security measures to protect your personal information.',
+  'privacy.retention.title': 'Data Retention',
+  'privacy.retention.content': 'We retain your information only as long as necessary to provide our services.',
+  'privacy.rights.title': 'Your Rights',
+  'privacy.rights.content': 'You have the right to access, update, or delete your personal information.',
+  'privacy.cookies.title': 'Cookies',
+  'privacy.cookies.content': 'We use cookies and similar technologies to improve your experience on our website.',
+  'privacy.changes.title': 'Changes to This Policy',
+  'privacy.changes.content': 'We may update this Privacy Policy from time to time.',
+  'privacy.contact.title': 'Contact Us',
+  'privacy.contact.content': 'If you have any questions about this Privacy Policy, please contact us at privacy@aladdin.dz',
+};

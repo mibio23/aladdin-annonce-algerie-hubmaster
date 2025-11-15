@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "validate-categories": "node src/lib/validate-categories.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  }
+}

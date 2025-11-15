@@ -1,0 +1,110 @@
+
+// Page translations for Spanish
+export const spanishPages = {
+  // Páginas comunes
+  'pages.ourStory.title': 'Nuestra Historia',
+  'pages.ourStory.subtitle': 'Conoce el viaje de Aladdin',
+  
+  'pages.careers.title': 'Carreras',
+  'pages.careers.subtitle': 'Únete a nuestro equipo',
+  
+  'pages.howItWorks.title': 'Cómo Funciona',
+  'pages.howItWorks.subtitle': 'Descubre cómo usar la plataforma',
+  
+  'pages.contact.title': 'Contactanos',
+  'pages.contact.subtitle': 'Estamos aquí para ayudarte',
+  
+  'pages.news.title': 'Noticias',
+  'pages.news.subtitle': 'Últimas noticias de Aladdin',
+  
+  // Pages principales
+  "pages.carrieres": "Carreras",
+  "pages.contact": "Contacto",
+  "pages.actualites": "Noticias",
+  "pages.plandusite": "Mapa del sitio",
+  "pages.mentionslegales": "Avisos legales",
+  "pages.authentification": "Autenticación",
+
+  // Notre Histoire page content
+  "notreHistoire.title": "Nuestra Historia",
+  "notreHistoire.visionTitle": "Una visión innovadora para Argelia",
+  "notreHistoire.visionContent": "Fundada en 2025, Aladdin nació de una visión simple pero ambiciosa: crear la plataforma de anuncios clasificados más completa y confiable de Argelia. Nuestro nombre, inspirado en el famoso personaje, simboliza nuestra promesa de cumplir los deseos de nuestros usuarios, ya sean compradores o vendedores.",
+  
+  "notreHistoire.missionTitle": "Nuestra Misión",
+  "notreHistoire.missionContent": "Nuestra misión es facilitar los intercambios comerciales en Argelia ofreciendo una plataforma moderna, segura y accesible para todos. Nos esforzamos por:",
+  "notreHistoire.missionPoint1": "Conectar compradores y vendedores de manera eficiente",
+  "notreHistoire.missionPoint2": "Promover el comercio local y el emprendimiento",
+  "notreHistoire.missionPoint3": "Ofrecer una experiencia de usuario excepcional",
+  "notreHistoire.missionPoint4": "Garantizar la seguridad de las transacciones",
+  
+  "notreHistoire.valuesTitle": "Nuestros Valores",
+  "notreHistoire.innovationTitle": "Innovación",
+  "notreHistoire.innovationContent": "Invertimos constantemente en las últimas tecnologías para ofrecer una experiencia de usuario óptima.",
+  "notreHistoire.trustTitle": "Confianza",
+  "notreHistoire.trustContent": "La seguridad y transparencia están en el corazón de nuestra plataforma, con sistemas de verificación rigurosos.",
+  "notreHistoire.proximityTitle": "Proximidad",
+  "notreHistoire.proximityContent": "Nuestro servicio al cliente local comprende las necesidades específicas del mercado argelino.",
+  "notreHistoire.excellenceTitle": "Excelencia",
+  "notreHistoire.excellenceContent": "Aspiramos a la excelencia en cada aspecto de nuestro servicio.",
+  
+  "notreHistoire.impactTitle": "Nuestro Impacto",
+  "notreHistoire.sellersTitle": "Para Vendedores",
+  "notreHistoire.sellersPoint1": "Máxima visibilidad para sus productos",
+  "notreHistoire.sellersPoint2": "Herramientas de marketing potentes",
+  "notreHistoire.sellersPoint3": "Gestión simplificada de anuncios",
+  "notreHistoire.sellersPoint4": "Soporte dedicado",
+  "notreHistoire.buyersTitle": "Para Compradores",
+  "notreHistoire.buyersPoint1": "Amplia selección de productos y servicios",
+  "notreHistoire.buyersPoint2": "Búsqueda facilitada",
+  "notreHistoire.buyersPoint3": "Transacciones seguras",
+  "notreHistoire.buyersPoint4": "Precios competitivos",
+  
+  "notreHistoire.innovationContinueTitle": "Innovación Continua",
+  "notreHistoire.innovationContinueContent": "Innovamos constantemente para mejorar nuestra plataforma:",
+  "notreHistoire.innovationPoint1": "Interfaz bilingüe (Francés/Árabe)",
+  "notreHistoire.innovationPoint2": "Aplicación móvil de alto rendimiento",
+  "notreHistoire.innovationPoint3": "Sistema de pago seguro",
+  "notreHistoire.innovationPoint4": "Inteligencia artificial para recomendaciones",
+  
+  "notreHistoire.engagementTitle": "Compromiso Comunitario",
+  "notreHistoire.engagementContent": "Apoyamos activamente:",
+  "notreHistoire.engagementPoint1": "El emprendimiento local",
+  "notreHistoire.engagementPoint2": "La economía digital de Argelia",
+  "notreHistoire.engagementPoint3": "La inclusión digital",
+  "notreHistoire.engagementPoint4": "El comercio justo",
+  
+  "notreHistoire.joinTitle": "Únete a la Aventura",
+  "notreHistoire.joinContent": "Ya seas vendedor o comprador, Aladdin te ofrece una experiencia única, adaptada al mercado argelino. Únete a nuestra creciente comunidad y participa en la transformación digital del comercio en Argelia.",
+
+  // Comment ça marche page translations
+  'commentCaMarche.title': 'Cómo funciona',
+  'commentCaMarche.subtitle': 'Descubre cómo usar Aladdin para comprar y vender fácilmente en Argelia',
+  'commentCaMarche.forSellers': 'Para Vendedores',
+  'commentCaMarche.step1.title': '1. Crea tu anuncio',
+  'commentCaMarche.step1.description': 'Describe tu producto o servicio con fotos y detalles completos',
+  'commentCaMarche.step2.title': '2. Recibe mensajes',
+  'commentCaMarche.step2.description': 'Los compradores interesados te contactan directamente a través de la plataforma',
+  'commentCaMarche.step3.title': '3. Completa la venta',
+  'commentCaMarche.step3.description': 'Negocia y organiza la transacción de forma segura',
+  'commentCaMarche.forBuyers': 'Para Compradores',
+  'commentCaMarche.buyerStep1.title': '1. Busca',
+  'commentCaMarche.buyerStep1.description': 'Encuentra lo que buscas con nuestro motor de búsqueda avanzado',
+  'commentCaMarche.buyerStep2.title': '2. Contacta al vendedor',
+  'commentCaMarche.buyerStep2.description': 'Haz tus preguntas y negocia el precio directamente',
+  'commentCaMarche.buyerStep3.title': '3. Compra con seguridad',
+  'commentCaMarche.buyerStep3.description': 'Completa tu compra siguiendo nuestros consejos de seguridad',
+  'commentCaMarche.advantages.title': '¿Por qué elegir Aladdin?',
+  'commentCaMarche.advantages.security.title': 'Seguridad garantizada',
+  'commentCaMarche.advantages.security.description': 'Nuestros sistemas de verificación y consejos de seguridad protegen tus transacciones',
+  'commentCaMarche.advantages.ease.title': 'Facilidad de uso',
+  'commentCaMarche.advantages.ease.description': 'Interfaz intuitiva y proceso simplificado para todos los usuarios',
+  'commentCaMarche.advantages.reach.title': 'Amplia audiencia',
+  'commentCaMarche.advantages.reach.description': 'Llega a miles de usuarios en toda Argelia',
+  'commentCaMarche.advantages.support.title': 'Soporte al cliente',
+  'commentCaMarche.advantages.support.description': 'Nuestro equipo te acompaña en cada paso de tu experiencia',
+  'commentCaMarche.cta.title': '¿Listo para empezar?',
+  'commentCaMarche.cta.description': 'Únete a miles de usuarios que confían en Aladdin',
+  'commentCaMarche.cta.postAd': 'Publicar un anuncio',
+  'commentCaMarche.cta.createShop': 'Crear tienda',
+  'commentCaMarche.cta.browse': 'Explorar anuncios',
+};

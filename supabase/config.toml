@@ -1,0 +1,65 @@
+project_id = "smsvybphkdxzvgawzoru"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[functions.send-notification-email]
+verify_jwt = true
+
+[functions.process-notifications]
+verify_jwt = true
+
+[functions.smart-search-engine]
+verify_jwt = true
+
+[functions.search-learning-system]
+verify_jwt = true
+
+[functions.image-processing]
+verify_jwt = true
+
+[functions.recommendation-engine]
+verify_jwt = true
+
+[functions.analytics-processor]
+verify_jwt = true
+
+[functions.monthly-cleanup]
+verify_jwt = false
+
+[functions.intelligent-search-assistant]
+verify_jwt = true
+
+[functions.free-intelligent-assistant]
+verify_jwt = true
+
+[functions.create-payment]
+verify_jwt = true
+
+[functions.verify-payment]
+verify_jwt = true
+
+[functions.update-stripe-secret]
+verify_jwt = true
+
+[functions.update-algerian-key]
+verify_jwt = true
+
+[functions.create-algerian-payment]
+verify_jwt = true
+
+[functions.update-paypal-credentials]
+verify_jwt = true
+
+[functions.create-paypal-payment]
+verify_jwt = true
+
+[functions.update-card-gateway]
+verify_jwt = true
+
+[functions.create-card-payment]
+verify_jwt = true

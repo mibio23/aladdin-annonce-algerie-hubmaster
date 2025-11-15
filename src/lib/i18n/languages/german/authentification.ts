@@ -1,0 +1,61 @@
+
+export const germanAuthentification = {
+  'authentification.title': 'Authentifizierung',
+  'authentification.subtitle': 'Entdecken Sie unsere sicheren Authentifizierungsmethoden und Datenschutzmaßnahmen zur Gewährleistung der Sicherheit Ihres Aladdin-Kontos.',
+  'authentification.lastUpdate': 'Letzte Aktualisierung: 15. Januar 2025',
+  'authentification.certification': 'ISO 27001 Zertifiziert',
+
+  'authentification.introduction.title': 'Einführung in die Authentifizierung',
+  'authentification.introduction.content1': 'Die Authentifizierung ist ein entscheidender Prozess, der es uns ermöglicht, die Identität der Benutzer zu überprüfen, bevor wir ihnen Zugang zu unseren Diensten gewähren. Bei Aladdin implementieren wir robuste Sicherheitsmaßnahmen zum Schutz Ihrer persönlichen Daten.',
+  'authentification.introduction.content2': 'Unser Authentifizierungssystem verwendet die neuesten Verschlüsselungstechnologien und entspricht internationalen Sicherheitsstandards. Wir verpflichten uns, die Vertraulichkeit und Integrität Ihrer Informationen zu gewährleisten.',
+  'authentification.introduction.content3': 'Diese Seite beschreibt unsere Authentifizierungsmethoden, Sicherheitsmaßnahmen und bewährten Praktiken, die wir zum Schutz Ihres Kontos empfehlen.',
+
+  'authentification.methods.title': 'Authentifizierungsmethoden',
+  'authentification.methods.email.title': 'E-Mail-Authentifizierung',
+  'authentification.methods.email.description': 'Sichere Anmeldung mit Ihrer E-Mail-Adresse und Ihrem Passwort',
+  'authentification.methods.email.feature1': 'Passwort-Verschlüsselung mit sicherem Hash',
+  'authentification.methods.email.feature2': 'E-Mail-Gültigkeitsprüfung',
+  'authentification.methods.email.feature3': 'Sichere Passwort-Wiederherstellung',
+  'authentification.methods.phone.title': 'Telefon-Authentifizierung',
+  'authentification.methods.phone.description': 'SMS-Verifizierung mit einmaligem Code',
+  'authentification.methods.phone.feature1': '6-stelliger Verifizierungscode',
+  'authentification.methods.phone.feature2': 'Automatisches Ablaufen der Codes',
+  'authentification.methods.phone.feature3': 'Schutz vor mehrfachen Versuchen',
+
+  'authentification.security.title': 'Konto-Sicherheit',
+  'authentification.security.encryption.title': 'Datenverschlüsselung',
+  'authentification.security.encryption.description': 'Alle Ihre sensiblen Daten werden mit den fortschrittlichsten Algorithmen verschlüsselt (AES-256).',
+  'authentification.security.verification.title': 'Zwei-Schritt-Verifizierung',
+  'authentification.security.verification.description': 'Option verfügbar, um die Sicherheit Ihres Kontos mit doppelter Authentifizierung zu stärken.',
+  'authentification.security.monitoring.title': 'Aktivitätsüberwachung',
+  'authentification.security.monitoring.description': 'Automatische Erkennung verdächtiger Aktivitäten und Echtzeitwarnungen.',
+
+  'authentification.compliance.title': 'Regulatorische Compliance',
+  'authentification.compliance.content1': 'Unsere Authentifizierungssysteme entsprechen lokalen und internationalen Datenschutzbestimmungen.',
+  'authentification.compliance.gdpr.title': 'DSGVO',
+  'authentification.compliance.gdpr.description': 'Konform mit der Datenschutz-Grundverordnung',
+  'authentification.compliance.iso.title': 'ISO 27001',
+  'authentification.compliance.iso.description': 'Zertifizierung für Informationssicherheitsmanagement',
+  'authentification.compliance.algeria.title': 'Algerisches Recht',
+  'authentification.compliance.algeria.description': 'Einhaltung der algerischen Datengesetzgebung',
+
+  'authentification.sessions.title': 'Session-Verwaltung',
+  'authentification.sessions.content1': 'Unsere Benutzersitzungen werden sicher mit erweiterten Kontrollmechanismen verwaltet.',
+  'authentification.sessions.features.title': 'Sicherheitsfeatures',
+  'authentification.sessions.features.feature1': 'Automatisches Ablaufen inaktiver Sitzungen',
+  'authentification.sessions.features.feature2': 'Verwaltung verbundener Geräte',
+  'authentification.sessions.features.feature3': 'Remote-Abmeldung möglich',
+  'authentification.sessions.features.feature4': 'Anmelde-Historie',
+
+  'authentification.support.title': 'Benutzer-Support',
+  'authentification.support.content1': 'Unser Support-Team steht Ihnen bei allen Aspekten der Authentifizierung zur Verfügung.',
+  'authentification.support.services.title': 'Verfügbare Services',
+  'authentification.support.services.recovery.title': 'Konto-Wiederherstellung',
+  'authentification.support.services.recovery.description': 'Hilfe bei der Wiederherstellung des Zugangs zu Ihrem Konto',
+  'authentification.support.services.assistance.title': 'Technische Unterstützung',
+  'authentification.support.services.assistance.description': 'Support bei Authentifizierungsproblemen',
+
+  'authentification.contact.title': 'Sicherheits-Kontakt',
+  'authentification.contact.content': 'Bei Fragen zur Sicherheit Ihres Kontos oder zu unseren Authentifizierungsmethoden wenden Sie sich an unser Sicherheitsteam.',
+  'authentification.contact.hours': 'Montag - Freitag, 9:00 - 18:00 Uhr'
+};

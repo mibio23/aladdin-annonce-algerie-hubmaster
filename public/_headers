@@ -1,0 +1,59 @@
+# Cache all assets with content hashes for 1 year
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache JavaScript bundles for 1 year (they have content hashes)
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache CSS bundles for 1 year (they have content hashes)
+/assets/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css  
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache Lovable analytics files
+/~flock.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images for 1 week
+/*.jpg
+  Cache-Control: public, max-age=604800
+
+/*.jpeg
+  Cache-Control: public, max-age=604800
+
+/*.png
+  Cache-Control: public, max-age=604800
+
+/*.webp
+  Cache-Control: public, max-age=604800
+
+/*.svg
+  Cache-Control: public, max-age=604800
+
+# Cache fonts for 1 year
+/*.woff
+  Cache-Control: public, max-age=31536000
+
+/*.woff2
+  Cache-Control: public, max-age=31536000
+
+# Cache manifest and service worker for 1 day
+/sw.js
+  Cache-Control: public, max-age=86400
+
+/manifest.json
+  Cache-Control: public, max-age=86400
+
+# Don't cache HTML files (for updates)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Root index should not be cached
+/
+  Cache-Control: public, max-age=0, must-revalidate

@@ -1,0 +1,2 @@
+
+export { loisirsCollectionsCategories } from "./loisirsCollections";

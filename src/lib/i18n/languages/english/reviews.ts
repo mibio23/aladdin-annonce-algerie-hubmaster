@@ -1,0 +1,22 @@
+
+export const englishReviews = {
+  "title": "Reviews",
+  "rating": "Rating",
+  "comment": "Comment",
+  "date": "Date",
+  "helpful": "Helpful",
+  "notHelpful": "Not Helpful",
+  "writeReview": "Write a Review",
+  "editReview": "Edit Review",
+  "deleteReview": "Delete Review",
+  "noReviews": "No reviews yet",
+  "averageRating": "Average Rating",
+  "totalReviews": "Total Reviews",
+  "stars": "stars",
+  "star": "star",
+  "excellent": "Excellent",
+  "good": "Good",
+  "average": "Average",
+  "poor": "Poor",
+  "terrible": "Terrible",
+};

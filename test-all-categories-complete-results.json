@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-10-24T11:24:33.693Z",
+  "success": true,
+  "summary": "Test complet réussi",
+  "categories": {
+    "algerian": 6,
+    "exchange": 1,
+    "total": 7
+  }
+}

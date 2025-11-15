@@ -1,0 +1,201 @@
+import React, { useState } from 'react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { MessageCircle, Send, Phone, Mail, MapPin } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { useAuth } from '@/contexts/AuthContext';
+import { safeStringify } from '@/utils/safeStringify';
+
+interface Shop {
+  id: string;
+  name: string;
+  description: string;
+  wilaya: string;
+  phoneNumbers: string[];
+  logoUrl: string;
+  productImageUrls: string[];
+  isOnline: boolean;
+  hasVideoStory: boolean;
+  isVerified?: boolean;
+}
+
+interface ContactModalProps {
+  shop: Shop | null;
+  onClose: () => void;
+}
+
+const ContactModal: React.FC<ContactModalProps> = ({ shop, onClose }) => {
+  const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+  const { user } = useAuth();
+
+  // Pré-remplir les champs si l'utilisateur est connecté
+  React.useEffect(() => {
+    if (user) {
+      setName(user.user_metadata?.full_name || user.email || '');
+      setEmail(user.email || '');
+    }
+  }, [user]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!shop) return;
+    
+    if (!message.trim()) {
+      toast({
+        title: "Erreur",
+        description: "Veuillez saisir un message",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    try {
+      setLoading(true);
+      
+      // Simulation d'envoi de message
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Enregistrer le message dans le localStorage (simulation)
+      const existingMessages = JSON.parse(localStorage.getItem('shopMessages') || '[]');
+      existingMessages.push({
+        id: `msg-${Date.now()}`,
+        shopId: shop.id,
+        shopName: shop.name,
+        senderName: name,
+        senderEmail: email,
+        message,
+        timestamp: new Date().toISOString(),
+        status: 'sent'
+      });
+      localStorage.setItem('shopMessages', safeStringify(existingMessages));
+      
+      toast({
+        title: "Message envoyé !",
+        description: `Votre message a été envoyé à ${shop.name}. Vous recevrez une réponse rapidement.`,
+      });
+      
+      // Réinitialiser le formulaire
+      setMessage('');
+      
+      // Fermer le modal après un court délai
+      setTimeout(() => {
+        onClose();
+      }, 1500);
+      
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue lors de l'envoi de votre message",
+        variant: "destructive"
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (!shop) return null;
+
+  return (
+    <Dialog open={!!shop} onOpenChange={onClose}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-2">
+            <MessageCircle className="h-5 w-5" />
+            Contacter {shop.name}
+          </DialogTitle>
+          <DialogDescription>
+            Envoyez un message directement à la boutique pour plus d'informations.
+          </DialogDescription>
+        </DialogHeader>
+        
+        <div className="space-y-4">
+          {/* Informations de contact de la boutique */}
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 space-y-2">
+            <h4 className="font-medium text-sm">Informations de contact</h4>
+            
+            {shop.phoneNumbers.length > 0 && (
+              <div className="flex items-center gap-2 text-sm">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>{shop.phoneNumbers.join(', ')}</span>
+              </div>
+            )}
+            
+            <div className="flex items-center gap-2 text-sm">
+              <Mail className="h-4 w-4 text-primary" />
+              <span>contact@{shop.name.toLowerCase().replace(/\s/g, '')}.dz</span>
+            </div>
+            
+            <div className="flex items-center gap-2 text-sm">
+              <MapPin className="h-4 w-4 text-primary" />
+              <span>{shop.wilaya}, Algérie</span>
+            </div>
+          </div>
+          
+          {/* Formulaire de contact */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {!user && (
+              <>
+                <div className="space-y-2">
+                  <Label htmlFor="name">Votre nom</Label>
+                  <Input
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Votre nom"
+                    required
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="email">Votre email</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="votre@email.com"
+                    required
+                  />
+                </div>
+              </>
+            )}
+            
+            <div className="space-y-2">
+              <Label htmlFor="message">Votre message</Label>
+              <Textarea
+                id="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Décrivez ce que vous recherchez ou posez vos questions..."
+                rows={4}
+                required
+              />
+            </div>
+            
+            <Button type="submit" disabled={loading} className="w-full">
+              {loading ? (
+                <>Envoi en cours...</>
+              ) : (
+                <>
+                  <Send className="h-4 w-4 mr-2" />
+                  Envoyer le message
+                </>
+              )}
+            </Button>
+          </form>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+export default ContactModal;

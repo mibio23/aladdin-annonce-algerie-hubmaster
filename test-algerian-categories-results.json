@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-10-24T10:46:48.040Z",
+  "categoriesFound": true,
+  "structureValid": false,
+  "translationsValid": false,
+  "foundCategories": [
+    "artisanat-traditionnel-algerien",
+    "produits-locaux-algeriens",
+    "vetements-traditionnels-algeriens",
+    "plats-traditionnels-algeriens",
+    "patisseries-traditionnelles-algeriennes",
+    "services-coutumes-traditionnels"
+  ],
+  "translationCounts": {
+    "fr": 59,
+    "ar": 59,
+    "en": 59,
+    "de": 59,
+    "es": 59
+  },
+  "categoryTranslations": {
+    "artisanat-traditionnel-algerien": {},
+    "produits-locaux-algeriens": {},
+    "vetements-traditionnels-algeriens": {},
+    "plats-traditionnels-algeriens": {},
+    "patisseries-traditionnelles-algeriennes": {},
+    "services-coutumes-traditionnels": {}
+  }
+}

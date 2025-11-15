@@ -1,0 +1,112 @@
+
+export const navigationEn = {
+  // Header translations
+  "header.login": "Login",
+  "header.announcements": "Announcements",
+  "header.shops": "Shops",
+  "header.postAd": "Post Ad",
+  "header.help": "Help",
+  
+  // Navigation
+  "navigation.dashboard": "Dashboard",
+  "navigation.profile": "Profile",
+  "navigation.myAds": "My Ads",
+  "navigation.myFavorites": "My Favorites",
+  "navigation.myShops": "My Shops",
+  "navigation.settings": "Settings",
+  "navigation.logout": "Logout",
+  
+  // Common
+  "common.loading": "Loading...",
+  "common.error": "Error",
+  "common.success": "Success",
+  "common.cancel": "Cancel",
+  "common.save": "Save",
+  "common.delete": "Delete",
+  "common.edit": "Edit",
+  "common.view": "View",
+  
+  // Additional header translations
+  'header.searchPlaceholder': 'Search for an ad...',
+  'header.downloadApp': 'Download App',
+  'header.welcome': 'Welcome',
+  'header.loginRegister': 'Login/Register',
+  'header.createShop': 'Create Shop',
+  'header.search': 'Search',
+  'header.menu': 'Menu',
+  'header.close': 'Close',
+  
+  // Menu items - Boutiques
+  'menu.shops.stores': 'Stores',
+  'menu.shops.offices': 'Offices',
+  'menu.shops.privateCompanies': 'Private Companies',
+  'menu.shops.nationalCompanies': 'National Companies',
+  'menu.shops.streetVendors': 'Street Vendors',
+  
+  // Menu items - Professions
+  'menu.professions.title': 'Professions and Repairers',
+  'menu.professions.viewAll': 'View All',
+  'menu.professions.plumber': 'Plumber',
+  'menu.professions.electrician': 'Electrician',
+  'menu.professions.applianceRepair': 'Appliance Repair',
+  'menu.professions.computerRepair': 'Computer Repair',
+  'menu.professions.autoMechanic': 'Auto Mechanic',
+  'menu.professions.motoMechanic': 'Motorcycle Mechanic',
+  'menu.professions.carpenter': 'Carpenter',
+  'menu.professions.painter': 'Painter',
+  'menu.professions.masonry': 'Masonry',
+  'menu.professions.airConditioning': 'Air Conditioning',
+  'menu.professions.locksmith': 'Locksmith',
+  'menu.professions.gardener': 'Gardener',
+  'menu.professions.phoneRepair': 'Phone Repair',
+  'menu.professions.cook': 'Cook',
+  'menu.professions.tailor': 'Tailor / Alterations',
+  'menu.professions.welder': 'Welder',
+  'menu.professions.metallurgist': 'Metallurgist',
+  'menu.professions.sportsCoach': 'Sports Coach',
+  'menu.professions.driver': 'Heavy/Light Driver',
+  'menu.professions.maritimeDiver': 'Maritime Diver',
+  'menu.professions.eventOrganizer': 'Event Organizer',
+  'menu.professions.other': 'Other...',
+  
+  // Dashboard translations
+  'dashboard.subtitle': 'Manage your ads, messages, and settings from one place',
+  'dashboard.quickAccess': 'Quick Access',
+  'dashboard.quickAccessDesc': 'Navigate quickly to your main sections',
+  'dashboard.quickActions': 'Quick Actions',
+  'dashboard.quickStats': 'Quick Stats',
+  'dashboard.myAdsDesc': 'Manage your classified ads',
+  'dashboard.messages': 'Messages',
+  'dashboard.messagesDesc': 'Chat with other users',
+  'dashboard.favoritesDesc': 'View your saved ads',
+  'dashboard.reservations': 'Reservations',
+  'dashboard.reservationsDesc': 'Manage your reservations',
+  'dashboard.profileDesc': 'Edit your personal information',
+  'dashboard.settingsDesc': 'Configure your account',
+  'dashboard.postAd': 'Post Ad',
+  'dashboard.newMessage': 'New Message',
+  'dashboard.activeAds': 'Active Ads',
+  'dashboard.unreadMessages': 'Unread Messages',
+
+  'dashboard.postAdDesc': 'Sell or donate your items',
+  'dashboard.shopMessages': 'Shop Messages',
+  'dashboard.shopMessagesDesc': 'View messages from your shops',
+  'dashboard.createShop': 'Create a Shop',
+  'dashboard.createShopDesc': 'Create your online shop',
+  'dashboard.jobOffers': 'Publish your job offer',
+  'dashboard.jobOffersDesc': 'Publish your skills and find clients',
+  'dashboard.jobMessages': 'Offer Messages',
+  'dashboard.jobMessagesDesc': 'View contacts for your job offers',
+  'dashboard.notifications': 'Notifications',
+  'dashboard.notificationsDesc': 'Stay informed about new activity',
+  'dashboard.loginToAccess': 'Log in to access',
+
+  // Shops
+  'shops.discover': 'Discover shops',
+  
+  // Additional footer links
+  'qui-sommes-nous': 'Who we are',
+  'comment-ca-marche': 'How it works',
+  'actualites': 'News',
+  'carrieres': 'Careers',
+};

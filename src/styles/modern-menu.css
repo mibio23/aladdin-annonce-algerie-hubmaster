@@ -1,0 +1,296 @@
+/* Styles personnalisés pour le menu moderne de catégories */
+
+/* Masquer la barre de défilement */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animations de survol pour les catégories */
+.category-hover-enter {
+  animation: categoryHoverEnter 0.3s ease-out;
+}
+
+@keyframes categoryHoverEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animations pour les sous-catégories */
+.subcategory-slide-enter {
+  animation: subcategorySlideEnter 0.4s ease-out;
+}
+
+@keyframes subcategorySlideEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Effet de lueur pour les catégories actives */
+.glow-effect {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* Support RTL */
+.rtl-support {
+  direction: rtl;
+}
+
+.rtl-support .scroll-container {
+  direction: ltr;
+}
+
+/* Styles pour les liens de catégories */
+.category-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316, #dc2626);
+  transition: width 0.3s ease;
+}
+
+.category-link:hover::before {
+  width: 100%;
+}
+
+/* Styles pour les sous-catégories */
+.subcategory-item {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.subcategory-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #f97316;
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+}
+
+.subcategory-item:hover::after {
+  transform: scaleY(1);
+}
+
+/* Styles pour les sous-sous-catégories */
+.sub-subcategory-item {
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.sub-subcategory-item:hover {
+  border-left-color: #f97316;
+  background: linear-gradient(90deg, rgba(254, 242, 242, 0.5), transparent);
+}
+
+/* Animation de pulsation pour les icônes */
+.icon-pulse {
+  animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Styles pour la recherche */
+.search-container {
+  position: relative;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.3);
+}
+
+/* Styles pour le mode sombre */
+.dark .category-link::before {
+  background: linear-gradient(90deg, #dc2626, #b91c1c);
+}
+
+.dark .subcategory-item:hover::after {
+  background: #dc2626;
+}
+
+.dark .sub-subcategory-item:hover {
+  border-left-color: #dc2626;
+  background: linear-gradient(90deg, rgba(30, 41, 59, 0.5), transparent);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .modern-menu-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  .categories-scroll {
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .subcategory-column {
+    width: 100%;
+    max-height: 40vh;
+  }
+  
+  .sub-subcategory-column {
+    width: 100%;
+    max-height: 40vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .subcategory-item {
+    padding: 0.75rem;
+  }
+  
+  .sub-subcategory-item {
+    padding: 0.75rem;
+  }
+}
+
+/* Animation de chargement */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Effet de transition pour les changements de langue */
+.language-transition {
+  transition: all 0.3s ease;
+}
+
+/* Styles pour l'indicateur de langue active */
+.language-indicator {
+  position: relative;
+}
+
+.language-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f97316;
+}
+
+/* Styles pour les badges de comptage */
+.category-count {
+  background: #f97316;
+  color: white;
+  border-radius: 9999px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* Animation de fondu pour les changements de contenu */
+.fade-enter {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.fade-exit {
+  animation: fadeOut 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Support pour les polices arabes */
+.arabic-font {
+  font-family: 'Changa', 'Arial', sans-serif;
+  font-weight: 600;
+}
+
+/* Styles pour les indicateurs visuels */
+.visual-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f97316;
+  display: inline-block;
+  margin-right: 0.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+}

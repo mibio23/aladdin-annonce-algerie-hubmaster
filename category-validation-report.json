@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-10-28T15:25:30.616Z",
+  "summary": {
+    "ar": {
+      "name": "Arabic",
+      "totalCategories": 0
+    },
+    "en": {
+      "name": "English",
+      "totalCategories": 0
+    },
+    "de": {
+      "name": "German",
+      "totalCategories": 0
+    },
+    "es": {
+      "name": "Spanish",
+      "totalCategories": 0
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,166 @@
+{
+  "categories": [
+    {
+      "id": "informatique-electronique",
+      "name": "Informatique & Électronique",
+      "slug": "informatique-electronique",
+      "icon": "laptop",
+      "level": 0,
+      "isActive": true,
+      "sortOrder": 1,
+      "subcategories": [
+        {
+          "id": "ordinateurs-peripheriques",
+          "name": "Ordinateurs & Périphériques",
+          "slug": "ordinateurs-peripheriques",
+          "icon": "monitor",
+          "level": 1,
+          "parentId": "informatique-electronique",
+          "isActive": true,
+          "sortOrder": 1,
+          "subcategories": [
+            {
+              "id": "pc-portables",
+              "name": "PC Portables",
+              "slug": "pc-portables",
+              "icon": "laptop",
+              "level": 2,
+              "parentId": "ordinateurs-peripheriques",
+              "isActive": true,
+              "sortOrder": 1
+            },
+            {
+              "id": "pc-de-bureau",
+              "name": "PC de Bureau",
+              "slug": "pc-de-bureau",
+              "icon": "desktop",
+              "level": 2,
+              "parentId": "ordinateurs-peripheriques",
+              "isActive": true,
+              "sortOrder": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "electromenager",
+      "name": "Électroménager",
+      "slug": "electromenager",
+      "icon": "blender",
+      "level": 0,
+      "isActive": true,
+      "sortOrder": 8,
+      "subcategories": [
+        {
+          "id": "appareils-cuisine",
+          "name": "Appareils de Cuisine",
+          "slug": "appareils-cuisine",
+          "icon": "chef-hat",
+          "level": 1,
+          "parentId": "electromenager",
+          "isActive": true,
+          "sortOrder": 1,
+          "subcategories": [
+            {
+              "id": "tables-chaises",
+              "name": "Tables & Chaises",
+              "slug": "tables-chaises",
+              "icon": "table",
+              "level": 2,
+              "parentId": "appareils-cuisine",
+              "isActive": true,
+              "sortOrder": 1
+            },
+            {
+              "id": "rangement-cuisine",
+              "name": "Rangement Cuisine",
+              "slug": "rangement-cuisine",
+              "icon": "archive",
+              "level": 2,
+              "parentId": "appareils-cuisine",
+              "isActive": true,
+              "sortOrder": 2
+            }
+          ]
+        },
+        {
+          "id": "appareils-nettoyage",
+          "name": "Appareils de Nettoyage",
+          "slug": "appareils-nettoyage",
+          "icon": "sparkles",
+          "level": 1,
+          "parentId": "electromenager",
+          "isActive": true,
+          "sortOrder": 2
+        },
+        {
+          "id": "climatisation-chauffage",
+          "name": "Climatisation & Chauffage",
+          "slug": "climatisation-chauffage",
+          "icon": "thermometer",
+          "level": 1,
+          "parentId": "electromenager",
+          "isActive": true,
+          "sortOrder": 3
+        },
+        {
+          "id": "petit-electromenager",
+          "name": "Petit Électroménager",
+          "slug": "petit-electromenager",
+          "icon": "blender",
+          "level": 1,
+          "parentId": "electromenager",
+          "isActive": true,
+          "sortOrder": 4
+        }
+      ]
+    },
+    {
+      "id": "immobilier",
+      "name": "Immobilier",
+      "slug": "immobilier",
+      "icon": "home",
+      "level": 0,
+      "isActive": true,
+      "sortOrder": 6,
+      "subcategories": [
+        {
+          "id": "appartements",
+          "name": "Appartements",
+          "slug": "appartements",
+          "icon": "apartment",
+          "level": 1,
+          "parentId": "immobilier",
+          "isActive": true,
+          "sortOrder": 1
+        },
+        {
+          "id": "maisons",
+          "name": "Maisons",
+          "slug": "maisons",
+          "icon": "home",
+          "level": 1,
+          "parentId": "immobilier",
+          "isActive": true,
+          "sortOrder": 2
+        },
+        {
+          "id": "terrains",
+          "name": "Terrains",
+          "slug": "terrains",
+          "icon": "map",
+          "level": 1,
+          "parentId": "immobilier",
+          "isActive": true,
+          "sortOrder": 3
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "totalCategories": 3,
+    "exportDate": "2025-10-26T11:25:59.866Z",
+    "version": "2.0.0-test"
+  }
+}

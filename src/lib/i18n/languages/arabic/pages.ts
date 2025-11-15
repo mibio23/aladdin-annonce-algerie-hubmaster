@@ -1,0 +1,110 @@
+
+// Page translations for Arabic
+export const arabicPages = {
+  // Pages communes
+  'pages.ourStory.title': 'قصتنا',
+  'pages.ourStory.subtitle': 'تعرف على رحلة علاء الدين',
+  
+  'pages.careers.title': 'الوظائف',
+  'pages.careers.subtitle': 'انضم إلى فريقنا',
+  
+  'pages.howItWorks.title': 'كيف يعمل',
+  'pages.howItWorks.subtitle': 'اكتشف كيفية استخدام المنصة',
+
+  // Comment ça marche page translations
+  'commentCaMarche.title': 'كيف يعمل',
+  'commentCaMarche.subtitle': 'اكتشف كيفية استخدام علاء الدين للشراء والبيع بسهولة في الجزائر',
+  'commentCaMarche.forSellers': 'للبائعين',
+  'commentCaMarche.step1.title': '1. أنشئ إعلانك',
+  'commentCaMarche.step1.description': 'وصف منتجك أو خدمتك بالصور والتفاصيل الكاملة',
+  'commentCaMarche.step2.title': '2. استقبل الرسائل',
+  'commentCaMarche.step2.description': 'المشترون المهتمون يتواصلون معك مباشرة عبر المنصة',
+  'commentCaMarche.step3.title': '3. أكمل البيع',
+  'commentCaMarche.step3.description': 'تفاوض ونظم المعاملة بأمان',
+  'commentCaMarche.forBuyers': 'للمشترين',
+  'commentCaMarche.buyerStep1.title': '1. ابحث',
+  'commentCaMarche.buyerStep1.description': 'اعثر على ما تبحث عنه باستخدام محرك البحث المتقدم لدينا',
+  'commentCaMarche.buyerStep2.title': '2. اتصل بالبائع',
+  'commentCaMarche.buyerStep2.description': 'اطرح أسئلتك وتفاوض على السعر مباشرة',
+  'commentCaMarche.buyerStep3.title': '3. اشتر بأمان',
+  'commentCaMarche.buyerStep3.description': 'أكمل شراءك باتباع نصائح الأمان الخاصة بنا',
+  'commentCaMarche.advantages.title': 'لماذا تختار علاء الدين؟',
+  'commentCaMarche.advantages.security.title': 'أمان مضمون',
+  'commentCaMarche.advantages.security.description': 'أنظمة التحقق ونصائح الأمان لدينا تحمي معاملاتك',
+  'commentCaMarche.advantages.ease.title': 'سهولة الاستخدام',
+  'commentCaMarche.advantages.ease.description': 'واجهة بديهية وعملية مبسطة لجميع المستخدمين',
+  'commentCaMarche.advantages.reach.title': 'جمهور واسع',
+  'commentCaMarche.advantages.reach.description': 'وصل إلى آلاف المستخدمين في جميع أنحاء الجزائر',
+  'commentCaMarche.advantages.support.title': 'دعم العملاء',
+  'commentCaMarche.advantages.support.description': 'فريقنا يرافقك في كل خطوة من تجربتك',
+  'commentCaMarche.cta.title': 'جاهز للبدء؟',
+  'commentCaMarche.cta.description': 'انضم إلى آلاف المستخدمين الذين يثقون في علاء الدين',
+  'commentCaMarche.cta.postAd': 'نشر إعلان',
+  'commentCaMarche.cta.createShop': 'أنشئ متجرك',
+  'commentCaMarche.cta.browse': 'تصفح الإعلانات',
+  
+  'pages.contact.title': 'اتصل بنا',
+  'pages.contact.subtitle': 'نحن هنا لمساعدتك',
+  
+  'pages.news.title': 'الأخبار',
+  'pages.news.subtitle': 'آخر أخبار علاء الدين',
+  
+  // Pages principales
+  "pages.carrieres": "الوظائف",
+  "pages.contact": "اتصل بنا",
+  "pages.actualites": "الأخبار",
+  "pages.plandusite": "خريطة الموقع", 
+  "pages.mentionslegales": "الإشعارات القانونية",
+  "pages.authentification": "المصادقة",
+
+  // Notre Histoire page content
+  "notreHistoire.title": "قصتنا",
+  "notreHistoire.visionTitle": "رؤية مبتكرة للجزائر",
+  "notreHistoire.visionContent": "تأسس علاء الدين في عام 2025، وولد من رؤية بسيطة لكنها طموحة: إنشاء منصة الإعلانات المبوبة الأكثر اكتمالاً وموثوقية في الجزائر. اسمنا، المستوحى من الشخصية الشهيرة، يرمز إلى وعدنا بتحقيق رغبات مستخدمينا، سواء كانوا مشترين أو بائعين.",
+  
+  "notreHistoire.missionTitle": "مهمتنا",
+  "notreHistoire.missionContent": "مهمتنا هي تسهيل التبادل التجاري في الجزائر من خلال تقديم منصة حديثة وآمنة ومتاحة للجميع. نسعى إلى:",
+  "notreHistoire.missionPoint1": "ربط المشترين والبائعين بكفاءة",
+  "notreHistoire.missionPoint2": "تعزيز التجارة المحلية وريادة الأعمال",
+  "notreHistoire.missionPoint3": "تقديم تجربة مستخدم استثنائية",
+  "notreHistoire.missionPoint4": "ضمان أمان المعاملات",
+  
+  "notreHistoire.valuesTitle": "قيمنا",
+  "notreHistoire.innovationTitle": "الابتكار",
+  "notreHistoire.innovationContent": "نستثمر باستمرار في أحدث التقنيات لتقديم تجربة مستخدم مثلى.",
+  "notreHistoire.trustTitle": "الثقة",
+  "notreHistoire.trustContent": "الأمان والشفافية في قلب منصتنا، مع أنظمة تحقق صارمة.",
+  "notreHistoire.proximityTitle": "القرب",
+  "notreHistoire.proximityContent": "خدمة العملاء المحلية لدينا تفهم الاحتياجات الخاصة للسوق الجزائري.",
+  "notreHistoire.excellenceTitle": "التميز",
+  "notreHistoire.excellenceContent": "نسعى للتميز في كل جانب من جوانب خدمتنا.",
+  
+  "notreHistoire.impactTitle": "تأثيرنا",
+  "notreHistoire.sellersTitle": "للبائعين",
+  "notreHistoire.sellersPoint1": "رؤية أقصى لمنتجاتهم",
+  "notreHistoire.sellersPoint2": "أدوات تسويقية قوية",
+  "notreHistoire.sellersPoint3": "إدارة مبسطة للإعلانات",
+  "notreHistoire.sellersPoint4": "دعم مخصص",
+  "notreHistoire.buyersTitle": "للمشترين",
+  "notreHistoire.buyersPoint1": "مجموعة واسعة من المنتجات والخدمات",
+  "notreHistoire.buyersPoint2": "بحث مبسط",
+  "notreHistoire.buyersPoint3": "معاملات آمنة",
+  "notreHistoire.buyersPoint4": "أسعار تنافسية",
+  
+  "notreHistoire.innovationContinueTitle": "الابتكار المستمر",
+  "notreHistoire.innovationContinueContent": "نبتكر باستمرار لتحسين منصتنا:",
+  "notreHistoire.innovationPoint1": "واجهة ثنائية اللغة (الفرنسية/العربية)",
+  "notreHistoire.innovationPoint2": "تطبيق جوال عالي الأداء",
+  "notreHistoire.innovationPoint3": "نظام دفع آمن",
+  "notreHistoire.innovationPoint4": "ذكاء اصطناعي للتوصيات",
+  
+  "notreHistoire.engagementTitle": "الالتزام المجتمعي",
+  "notreHistoire.engagementContent": "ندعم بنشاط:",
+  "notreHistoire.engagementPoint1": "ريادة الأعمال المحلية",
+  "notreHistoire.engagementPoint2": "الاقتصاد الرقمي في الجزائر",
+  "notreHistoire.engagementPoint3": "الشمول الرقمي",
+  "notreHistoire.engagementPoint4": "التجارة العادلة",
+  
+  "notreHistoire.joinTitle": "انضم إلى المغامرة",
+  "notreHistoire.joinContent": "سواء كنت بائعًا أو مشتريًا، يقدم لك علاء الدين تجربة فريدة مصممة للسوق الجزائري. انضم إلى مجتمعنا المتنامي وشارك في التحول الرقمي للتجارة في الجزائر.",
+};
