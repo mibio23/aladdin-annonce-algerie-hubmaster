@@ -1,1 +1,26 @@
+name: Purge deleted category announcements
 
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pg
+        run: npm install pg --no-save
+
+      - name: Purge
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          PGSSLMODE: ${{ secrets.PGSSLMODE }}
+        run: node scripts/purge_deleted_announcements.cjs
